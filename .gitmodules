@@ -2,8 +2,8 @@
 	path = SINe
 	url = https://OriginalSINe@bitbucket.org/OriginalSINe/codebase.git
 [submodule "Assets/Company"]
-	path = Assets/Company
+	path = Assets/SINe
 	url = https://OriginalSINe@bitbucket.org/OriginalSINe/codebase.git
 [submodule "Assets/Company.Unity"]
-	path = Assets/Company.Unity
+	path = Assets/SINe.Unity
 	url = https://OriginalSINe@bitbucket.org/OriginalSINe/codebase-unity.git
