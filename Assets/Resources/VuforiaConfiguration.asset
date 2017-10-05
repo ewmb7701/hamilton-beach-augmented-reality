@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: VuforiaConfiguration
   m_EditorClassIdentifier: 
   vuforia:
-    vuforiaLicenseKey: AczF5lz/////AAAAGQiI72lVWkq+o5CKlX3hiBkeXv6oyAgFFnw5H1THvgDYDlMBg2JZSjcpGtp+vLqgADlOagSOMpjDA1murdZ/fpnTN1NV+2ud5JkdiueRo8orcuBr3+Mzn2EIevGsxYnEW2FfBPjEGwBx8ei5RpSw1gB9qanaJcjWPr/O9CBDrzV57W3p0PlbCbXBUs7cY35CVQXNvhwoJF0mUuF4lvrIY30dVdobQMyOXXaGj6ywQRAlZuS54nD4vB2WhBAJtfHmHFg9+tavwwC38eEcy+pk7ubGw8h8yrGX7UbBciRaG3XATp5CjbLW+vUzdpuKChkwjrXEEbC+KKvvrPI8aKLoV3u6B/xUHC3T3EJpp5l1r1Vn
+    vuforiaLicenseKey: ASKg/qb/////AAAAGV5sey7eKUxVsCqqLc3Lj5xCW0gCp8Au2LyooNb+3Cjf3/A8w1G5Mkv/6kKUtzeWwOesRRHh+4cWjeaRpA/dG+2ixeZy2+Q/aZ5VUYsNrVGkS3HunUraU5Zx/pVIZVGOchmzdio+wqT6sPe57GjkA186TrvBUK+h8PliEwG2YFwWOddDhzOH1xrpo4OOSB9osPa2zGYWbgB1o6pc/gFyE0jI4HXfvBWJ/dbeIpFoXJQ8hGV0c5E+N9fn/bylfQcaoNa6nGkfqLD08SEHu1T+GvayTwgkt0g92gGKyDxYg+quQjbXghe0sKgdmpmIhCSL1EvT978ubKefzkAkr/jol+fP8lIW7cjgVLTK+BBhnvDm
     ufoLicenseKey: QVFXb3Y1UC8vLy8vQUFBQUtJSGdRS1hDWmtiZHFqdTlNRURhKzJ0cUxqcE9pV3ExS04rdVpzWlE0NFVLeXF5RVBEcjdFcUVLS0tvMlRTdTRyNHgxdzBDRDFlSks4UmM4MW4wQ1YwK1NhamVsQzBmSllJWlFSQWdNUGZncUlBM3lETGpDLzNoQ0JrK0s1KzA2WU1GSWxIWnhkUXNTU2VFZXhlVnlSaE9oQ09FU2pRODFEUkQ5YmNCSGVyR3dQeXJBTlRadlVtREtxY0N1cHUwK2RqbGNzOUtxOUJPNWZIQ3hHbXJqY2dmaUYzZks0eE00RzcraGxEcXlxS0lMRkYyL05KV2Qvdjh6czIyNFV3aDUrZ1RUN3hDVmIrNEVhU0hOclJzYUcvOStRc3RyTDMzOFh4RjQ5M1NoYjZvdEhXTGRpaEllNkZHYmZhUFIrUzZ0OFNGeGJwclZKRjlydWxUbWZqN09qa2hUdEh6Um0rRTQyRzliUWNDQ09FeW8=
     delayedInitialization: 0
     cameraDeviceModeSetting: -1
@@ -43,8 +43,10 @@ MonoBehaviour:
       FieldOfView: {x: 0, y: 0, z: 0, w: 0}
       ContainsMagnet: 0
   databaseLoad:
-    dataSetsToLoad: []
-    dataSetsToActivate: []
+    dataSetsToLoad:
+    - HamiltonBeachAR
+    dataSetsToActivate:
+    - HamiltonBeachAR
   videoBackground:
     clippingMode: 0
     numDivisions: 2
