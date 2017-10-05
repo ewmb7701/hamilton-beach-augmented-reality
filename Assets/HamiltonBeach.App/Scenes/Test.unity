@@ -187,14 +187,6 @@ MonoBehaviour:
   mInitializedInEditor: 1
   mDataSetPath: Vuforia/HamiltonBeachAR.xml
   mExtendedTracking: 0
-  mInitializeSmartTerrain: 0
-  mReconstructionToInitialize: {fileID: 0}
-  mSmartTerrainOccluderBoundsMin: {x: 0, y: 0, z: 0}
-  mSmartTerrainOccluderBoundsMax: {x: 0, y: 0, z: 0}
-  mIsSmartTerrainOccluderOffset: 0
-  mSmartTerrainOccluderOffset: {x: 0, y: 0, z: 0}
-  mSmartTerrainOccluderRotation: {x: 0, y: 0, z: 0, w: 0}
-  mAutoSetOccluderFromTargetSize: 0
   mAspectRatio: 0.63771427
   mImageTargetType: 0
   mWidth: 100
@@ -285,60 +277,45 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 34790655}
     m_Modifications:
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+    - target: {fileID: 4428533256636862, guid: 6f0df25cd54f74e4b91e8729bdf5a157, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+    - target: {fileID: 4428533256636862, guid: 6f0df25cd54f74e4b91e8729bdf5a157, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+    - target: {fileID: 4428533256636862, guid: 6f0df25cd54f74e4b91e8729bdf5a157, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+    - target: {fileID: 4428533256636862, guid: 6f0df25cd54f74e4b91e8729bdf5a157, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+    - target: {fileID: 4428533256636862, guid: 6f0df25cd54f74e4b91e8729bdf5a157, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+    - target: {fileID: 4428533256636862, guid: 6f0df25cd54f74e4b91e8729bdf5a157, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+    - target: {fileID: 4428533256636862, guid: 6f0df25cd54f74e4b91e8729bdf5a157, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+    - target: {fileID: 4428533256636862, guid: 6f0df25cd54f74e4b91e8729bdf5a157, type: 2}
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.003
-      objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.003
-      objectReference: {fileID: 0}
-    - target: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.003
-      objectReference: {fileID: 0}
-    - target: {fileID: 100074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+  m_ParentPrefab: {fileID: 100100000, guid: 6f0df25cd54f74e4b91e8729bdf5a157, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &823454244 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 400074, guid: d1e39584c7c3d8e48af3e27003992b85, type: 3}
+  m_PrefabParentObject: {fileID: 4428533256636862, guid: 6f0df25cd54f74e4b91e8729bdf5a157,
+    type: 2}
   m_PrefabInternal: {fileID: 823454243}
 --- !u!1 &1021978682
 GameObject:
@@ -365,7 +342,6 @@ AudioListener:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1021978682}
   m_Enabled: 1
-  m_ExtensionPropertyValues: []
 --- !u!124 &1021978684
 Behaviour:
   m_ObjectHideFlags: 0
@@ -404,6 +380,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -433,6 +410,7 @@ Mesh:
     firstByte: 0
     indexCount: 6
     topology: 0
+    baseVertex: 0
     firstVertex: 0
     vertexCount: 4
     localAABB:
@@ -450,6 +428,7 @@ Mesh:
   m_IsReadable: 1
   m_KeepVertices: 1
   m_KeepIndices: 1
+  m_IndexFormat: 0
   m_IndexBuffer: 000001000200020001000300
   m_Skin: []
   m_VertexData:
