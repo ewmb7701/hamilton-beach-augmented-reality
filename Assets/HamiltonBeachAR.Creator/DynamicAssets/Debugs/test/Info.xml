@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<DABInfo xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>Test</Name>
+  <Creator>Me</Creator>
+  <Version>0</Version>
+  <DynamicAssetTypeInfo>
+    <AssemblyQualifiedName>SINe.Unity.DynamicAssets.Debug, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
+  </DynamicAssetTypeInfo>
+</DABInfo>
