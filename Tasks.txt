@@ -1,0 +1,64 @@
+DOING
+	DEBUG
+
+	NOW
+		Create HamBam Assets
+		
+	TEST
+
+DONE	
+	NOW
+		IValueVector<T> : DictList<T> where T : IValue
+			Adding the initial vectors
+		Xml name conflict resolution for ActorValues
+		InvokeRecursive calls IEnumerable fields
+		
+		OnEditWrapper<T> where T : IEditable	
+		Convert EditableList into a OnEditWrapper<List<IEditable>>
+			List Editor does not get serialzied, it just edits the the list that will get serialzied
+		OnCollectioneditr move addition to bottom, but still in foldout
+		
+		CollectionOnEdit iterator
+		
+		All IAssetSaveable have ISavePath
+		Recursive SaveAssetToDatabase with no path argument
+		
+		Building DynamicAssetBundle of all the AssetPointer.Asset recurisvely
+			Getfields downwards
+				Use this for callbacks instead
+			Then use this to get all which implement IIncludeInAssetBundle
+			Then add their paths to the bundle
+			then build it
+	
+		EditorAPI as last argument
+			
+	TEST
+		DAB Framework
+			Saving "Works"
+			Building "Works"
+			Selecting a new AssetPointer=>Asset "Works"
+			Editing new Assets via their XmlAsset
+			Creating a new XmlAsset "Works"
+
+		Loading from AssetPointers DAB using paths works
+		
+Backlog	
+	NOW
+		Bring ScriptableObjects into DynamicAssetBundleSystem
+		convert Logo, Track, and Sfx to use new AssetPointer system
+		Make UnityEngine.Object Asset type in FileExtension Tuple dict
+		
+		Further Generification of Shared Codebase
+			DynamicEnum partial classes
+			AestheticAudio TrackIDs called by SceneManager
+			
+		Createa documentation and kanban
+		
+		Editable ValueVector
+
+		.NET Scripting Runtime Stable
+			Topological graph sorting using tuples instead of edges
+	
+	TEST
+		ValueVector serialization
+			Just convert it to a list and back

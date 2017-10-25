@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<DABComponent_Debug2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DynamicAssetBundle xsi:type="DABDebug">
+    <_Info>
+      <Name>tesfdafsda</Name>
+      <Creator>lol</Creator>
+      <DABTypeInfo>
+        <AssemblyQualifiedName>SINe.Unity.DynamicAssetBundles.DABDebug, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
+      </DABTypeInfo>
+    </_Info>
+  </DynamicAssetBundle>
+  <_DebugAssetPointer>
+    <_AssetInfo>
+      <_GUID>b90dd29926e663b4eb36335958dcd7af</_GUID>
+      <_AssetDatabasePath>Assets/HamiltonBeachAR.Creator/NewXmlAsset_Debug2.xmlassetdebug.xml</_AssetDatabasePath>
+      <_TypeInfo>
+        <AssemblyQualifiedName>SINe.Unity.DynamicAssetBundles.XmlAsset_Debug, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
+      </_TypeInfo>
+    </_AssetInfo>
+  </_DebugAssetPointer>
+  <_List />
+  <_ListString />
+</DABComponent_Debug2>
