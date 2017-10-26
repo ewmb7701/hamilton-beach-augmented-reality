@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 using SINe.Unity.Managers;
 using SINe.Unity.DynamicAssetBundles;
-using SINe.Unity.DynamicAssetBundleSystem;
+using SINe.Unity.DynamicAssetBundleFramework;
 
 namespace AugmentEX.HamiltonBeachAR.SceneManagers
 {

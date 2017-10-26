@@ -1,13 +1,14 @@
 DOING
 	DEBUG
+		Reimport Assets
 
-	NOW
+	TASKS
 		Create HamBam Assets
 		
 	TEST
 
-DONE	
-	NOW
+DONE
+	TASKS
 		IValueVector<T> : DictList<T> where T : IValue
 			Adding the initial vectors
 		Xml name conflict resolution for ActorValues
@@ -31,6 +32,9 @@ DONE
 			then build it
 	
 		EditorAPI as last argument
+		
+		Make UnityAssets not actually create the new asset
+			Technically not Isaveable, then?
 			
 	TEST
 		DAB Framework
@@ -43,7 +47,9 @@ DONE
 		Loading from AssetPointers DAB using paths works
 		
 Backlog	
-	NOW
+	TASKS
+		Make DABComponents have AssetPointers
+	
 		Bring ScriptableObjects into DynamicAssetBundleSystem
 		convert Logo, Track, and Sfx to use new AssetPointer system
 		Make UnityEngine.Object Asset type in FileExtension Tuple dict
@@ -58,6 +64,7 @@ Backlog
 
 		.NET Scripting Runtime Stable
 			Topological graph sorting using tuples instead of edges
+			Field Editor uses nameof field by default
 	
 	TEST
 		ValueVector serialization

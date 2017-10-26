@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_Name>Remove That Thing</_Name>
+  <_Description>You see that thing? Remove that thing! You're better off without it</_Description>
+  <_ManaulOffset>420</_ManaulOffset>
+  <_Animation>
+    <_AssetInfo>
+      <_GUID>d7347ae9be48d0d48973a17e08d13296</_GUID>
+      <_AssetDatabasePath>Assets/HamiltonBeachAR.Creator/New Animation.anim</_AssetDatabasePath>
+      <_TypeInfo>
+        <AssemblyQualifiedName>UnityEngine.AnimationClip, UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
+      </_TypeInfo>
+    </_AssetInfo>
+  </_Animation>
+</Step>

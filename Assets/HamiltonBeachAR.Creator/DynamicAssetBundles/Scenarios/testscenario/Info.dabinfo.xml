@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<DABInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_Name>TestScenario</_Name>
+  <_Creator>Me</_Creator>
+  <_DABTypeInfo>
+    <AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.Scenario, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
+  </_DABTypeInfo>
+</DABInfo>
