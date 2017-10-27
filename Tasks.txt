@@ -1,9 +1,10 @@
 DOING
 	DEBUG
-		Reimport Assets
 
 	TASKS
-		Create HamBam Assets
+		Basic AR support
+			scene units are in millimieters
+		Basic backend frontend hookup for DynamicAssetBundles
 		
 	TEST
 
@@ -45,6 +46,8 @@ DONE
 			Creating a new XmlAsset "Works"
 
 		Loading from AssetPointers DAB using paths works
+		
+		Create HamBam Assets
 		
 Backlog	
 	TASKS
