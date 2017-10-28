@@ -2,9 +2,19 @@ DOING
 	DEBUG
 
 	TASKS
-		Basic AR support
-			scene units are in millimieters
+		"Debug" DABDatabase mode, which loads directly from files
+		DAB Build Options
+			Build Type
+				Bundle type
+			Building DABS to another device
 		Basic backend frontend hookup for DynamicAssetBundles
+		A way to set all materials recursively
+			Field for Material
+			OnValidate
+				if different material, 
+				GetComponentsInChildren
+				SetMaterial(this Enumerable<RenderThing> renders, Material mat)
+		A way to edit XmlAssets without going through a DAB
 		
 	TEST
 
@@ -36,6 +46,9 @@ DONE
 		
 		Make UnityAssets not actually create the new asset
 			Technically not Isaveable, then?
+			
+		Basic AR support
+			scene units are in millimieters
 			
 	TEST
 		DAB Framework

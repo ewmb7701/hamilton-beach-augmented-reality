@@ -81,7 +81,7 @@ GameObject:
   - component: {fileID: 114151362302532028}
   - component: {fileID: 114253684738912736}
   m_Layer: 0
-  m_Name: Engine
+  m_Name: Cores
   m_TagString: Untagged
   m_Icon: {fileID: 2800000, guid: 83fb5b5f2d563474fa28516b9907d25e, type: 3}
   m_NavMeshLayer: 0

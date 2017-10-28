@@ -22,10 +22,10 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         /// </summary>
         public string _Description;
 
-        /// <summary>
-        /// The offset from the start of the manual for the language section of the manual;
-        /// </summary>
-        public int _ManaulOffset;
+        ///// <summary>
+        ///// The offset from the start of the manual for the language section of the manual;
+        ///// </summary>
+        //public int _ManaulOffset;
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // OnEdit
@@ -35,7 +35,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         {
             _Name = editorAPI.OnEdit.Field(_Name, "Name");
             _Description = editorAPI.OnEdit.Field(_Description, "Description");
-            _ManaulOffset = editorAPI.OnEdit.Field(_ManaulOffset, "Manual Offset");
+            //_ManaulOffset = editorAPI.OnEdit.Field(_ManaulOffset, "Manual Offset");
         }
 
         public override string ToString()
