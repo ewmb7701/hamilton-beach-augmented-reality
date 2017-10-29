@@ -40,5 +40,5 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
     /// <summary>
     /// AssetPointer to Step Asset;
     /// </summary>
-    public class StepPtr : AssetPointer_XmlAsset<Step> { }
+    public class StepPtr : XmlAssetPtr<Step> { }
 }

@@ -5,6 +5,6 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
     /// <summary>
     /// DynamicAssetBundle for 
     /// </summary>
-    [RequiredDABComponents(typeof(StepCollection))]
+    [RequiredAssetsPointers(typeof(StepCollectionPtr))]
     public class Scenario : DynamicAssetBundle { }
 }

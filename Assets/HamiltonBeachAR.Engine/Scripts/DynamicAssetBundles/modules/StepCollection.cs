@@ -9,7 +9,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
     /// <summary>
     /// Collection of steps to be included in a DynamicAssetBundle;
     /// </summary>
-    public class StepCollection : DABComponent, 
+    public class StepCollection : XmlAsset, 
         IOnAssetLoadedFromAssetDatabase
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -41,4 +41,6 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
             _onEdit_Steps = new OnEditCollectionIterable_List<StepPtr, ListIterable<StepPtr>>(_Steps, "Steps");
         }
     }
+
+    public class StepCollectionPtr : XmlAssetPtr<StepCollection> { }
 }

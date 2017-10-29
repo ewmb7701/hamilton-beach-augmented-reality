@@ -1,5 +1,6 @@
 DOING
 	DEBUG
+		The new Top-Level AssetPointers
 
 	TASKS
 		"Debug" DABDatabase mode, which loads directly from files
@@ -15,6 +16,9 @@ DOING
 				GetComponentsInChildren
 				SetMaterial(this Enumerable<RenderThing> renders, Material mat)
 		A way to edit XmlAssets without going through a DAB
+			need an XmlAssetDatabase of XmlAssets which maps GUID -> XmlAssets
+			Whenever it is looked at in the inspector or loaded or whatever, adds to this Database
+		DABModules to regular XmlAssets
 		
 	TEST
 

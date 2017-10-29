@@ -15,12 +15,12 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         /// <summary>
         /// The name;
         /// </summary>
-        public string _Name;
+        public string _Name = "";
 
         /// <summary>
         /// Description;
         /// </summary>
-        public string _Description;
+        public string _Description = "";
 
         ///// <summary>
         ///// The offset from the start of the manual for the language section of the manual;

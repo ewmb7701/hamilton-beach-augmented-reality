@@ -10,5 +10,5 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
     /// <summary>
     /// AssetPointer to MiscInfo Asset;
     /// </summary>
-    public class MiscInfoPtr : AssetPointer_XmlAsset<MiscInfo> { }
+    public class MiscInfoPtr : XmlAssetPtr<MiscInfo> { }
 }

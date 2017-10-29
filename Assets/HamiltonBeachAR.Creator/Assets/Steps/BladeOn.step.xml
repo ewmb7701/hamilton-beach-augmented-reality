@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<Step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <_Name />
+  <_Description />
+  <_Animation>
+    <_AssetInfo>
+      <_GUID />
+      <_AssetDatabasePath />
+      <_TypeInfo>
+        <AssemblyQualifiedName>UnityEngine.AnimationClip, UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
+      </_TypeInfo>
+    </_AssetInfo>
+  </_Animation>
+  <_AnimationSpeed>1</_AnimationSpeed>
+</Step>

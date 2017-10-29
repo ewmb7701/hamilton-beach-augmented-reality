@@ -34,5 +34,5 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
     /// <summary>
     /// AssetPointer to an Part XmlAsset;
     /// </summary>
-    public class PartPtr : AssetPointer_XmlAsset<Part> { }
+    public class PartPtr : XmlAssetPtr<Part> { }
 }

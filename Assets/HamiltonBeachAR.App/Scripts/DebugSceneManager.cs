@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using SINe.Unity.Managers;
 using SINe.Unity.DynamicAssetBundles;
 using SINe.Unity.DynamicAssetBundleFramework;
+using SINe.Collections;
 
 namespace AugmentEX.HamiltonBeachAR.SceneManagers
 {
@@ -31,16 +32,10 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
 
             foreach (DABDebug dabDebug in DABCore.Inst.Database.GetAllOfType<DABDebug>()) // for all DABDebug DynamicAsssetBundles
             {
-                DABComponent_Debug debugComponent;
-                if(dabDebug.Components.TryGetValue(out debugComponent)) // got the debug component
+                XmlAsset_Debug asset;
+                if (dabDebug.Assets.TryOutAsset(out asset)) // got the debug component
                 {
-                    _uiText.text += debugComponent._DebugAssetPointer.Asset.ItsAString + " ";
-                }
-
-                DABComponent_Debug2 debugComponent2;
-                if (dabDebug.Components.TryGetValue(out debugComponent2)) // got the debug component 2
-                {
-                    _uiText.text += debugComponent2._DebugAssetPointer.Asset.ItsAString + " ";
+                    _uiText.text += asset.ItsAString + " ";
                 }
             }
         }
