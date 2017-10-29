@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<StepCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_StepPtrs>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>8f844b35d15d518489856d2489e07b63</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Creator/Assets/Steps/BladeOff.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+  </_StepPtrs>
+</StepCollection>

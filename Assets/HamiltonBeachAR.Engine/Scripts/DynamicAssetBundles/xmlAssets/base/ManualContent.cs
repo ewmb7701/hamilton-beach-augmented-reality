@@ -13,7 +13,12 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
         /// <summary>
-        /// The name;
+        /// The ID;
+        /// </summary>
+        public string _ID = "";
+
+        /// <summary>
+        /// The name to display;
         /// </summary>
         public string _Name = "";
 
@@ -33,6 +38,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
 
         public override void OnEdit_Actual(IEditorAPI editorAPI)
         {
+            _ID = editorAPI.OnEdit.Field(_ID, "ID");
             _Name = editorAPI.OnEdit.Field(_Name, "Name");
             _Description = editorAPI.OnEdit.Field(_Description, "Description");
             //_ManaulOffset = editorAPI.OnEdit.Field(_ManaulOffset, "Manual Offset");
@@ -40,7 +46,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
 
         public override string ToString()
         {
-            return _Name;
+            return _ID;
         }
     }
 }

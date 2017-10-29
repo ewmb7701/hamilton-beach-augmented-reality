@@ -1,7 +1,8 @@
 ﻿using SINe.Unity.DynamicAssetBundleFramework;
-using SINe.Unity.DynamicAssetBundleFramework.Editor;
 
 using UnityEditor;
+
+using SINe.Unity.DynamicAssetBundleFramework.Editor;
 
 namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles.Editor
 {
@@ -30,6 +31,12 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles.Editor
         public static void Create_XmlAsset_Part()
         {
             DABEditorUtility.TryCreateXmlAsset<Part>();
+        }
+
+        [MenuItem(XmlAsset.MenuPrefix + "StepCollection", false, XmlAsset.MenuPriority)]
+        public static void Create_XmlAsset_StepCollection()
+        {
+            DABEditorUtility.TryCreateXmlAsset<StepCollection>();
         }
     }
 }

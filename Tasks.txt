@@ -1,24 +1,43 @@
 DOING
 	DEBUG
-		The new Top-Level AssetPointers
+		caching and saving	
+			OnBeforeSave is invoking the cace method, which is reloading the old asset
+			so just stop doing that
+			Does not need assets to be cached, as only AssetPointers are being compiled to the bundle
+			The Asset is grabbed from an AssetPath when building
+			Assets should not contains AssetPointers, they are standalone!
 
 	TASKS
+		Bring back invoke downwards
+			Imagine an object whose fields appear once you invoke the method
+			simply iterating throught it will miss those objects
+	
+		Create DABS
+	
 		"Debug" DABDatabase mode, which loads directly from files
+		
 		DAB Build Options
 			Build Type
 				Bundle type
 			Building DABS to another device
+			
 		Basic backend frontend hookup for DynamicAssetBundles
+		
 		A way to set all materials recursively
 			Field for Material
 			OnValidate
 				if different material, 
 				GetComponentsInChildren
 				SetMaterial(this Enumerable<RenderThing> renders, Material mat)
+				
+		Recursive CacheTime method
+			Foreach IAssetPointer
+				If cahce.CachTimeAttribute == cachetime
+					DoCache
+				
 		A way to edit XmlAssets without going through a DAB
 			need an XmlAssetDatabase of XmlAssets which maps GUID -> XmlAssets
 			Whenever it is looked at in the inspector or loaded or whatever, adds to this Database
-		DABModules to regular XmlAssets
 		
 	TEST
 
@@ -53,6 +72,8 @@ DONE
 			
 		Basic AR support
 			scene units are in millimieters
+		
+		DABModules to regular Top-Level AssetPointers
 			
 	TEST
 		DAB Framework
