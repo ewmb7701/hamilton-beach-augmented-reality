@@ -3,8 +3,6 @@ using System.Xml.Serialization;
 
 using SINe.Collections;
 
-using UnityEngine;
-
 using SINe.Unity.Utility;
 using SINe.Unity.DynamicAssetBundleFramework;
 using SINe.Unity.OnEdit;
@@ -75,13 +73,5 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         }
     }
 
-    public class StepCollectionPtr : XmlAssetPtr<StepCollection>
-    {
-        protected override void cacheAssetDo(IEditorAPI editorAPI)
-        {
-            base.cacheAssetDo(editorAPI);
-
-            Debug.LogErrorFormat("Steps Count {0}", Asset._StepPtrs.Count);
-        }
-    }
+    public class StepCollectionPtr : XmlAssetPtr<StepCollection> { }
 }

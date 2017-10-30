@@ -1,16 +1,16 @@
 DOING
-	DEBUG
-		caching and saving	
-			OnBeforeSave is invoking the cace method, which is reloading the old asset
-			so just stop doing that
-			Does not need assets to be cached, as only AssetPointers are being compiled to the bundle
-			The Asset is grabbed from an AssetPath when building
-			Assets should not contains AssetPointers, they are standalone!
+	DEBUG TASKS
 
-	TASKS
-		Bring back invoke downwards
-			Imagine an object whose fields appear once you invoke the method
-			simply iterating throught it will miss those objects
+	TASKS	
+		Scenario hookup for DynamicAssetBundles
+			Scenarios
+				One for each scenario DAB
+				Steps
+					Displaying					
+					Previous
+					Next
+					Repeat
+					Playing animations
 	
 		Create DABS
 	
@@ -20,8 +20,6 @@ DOING
 			Build Type
 				Bundle type
 			Building DABS to another device
-			
-		Basic backend frontend hookup for DynamicAssetBundles
 		
 		A way to set all materials recursively
 			Field for Material
@@ -38,6 +36,13 @@ DOING
 		A way to edit XmlAssets without going through a DAB
 			need an XmlAssetDatabase of XmlAssets which maps GUID -> XmlAssets
 			Whenever it is looked at in the inspector or loaded or whatever, adds to this Database
+			
+		caching and saving	
+			OnBeforeSave is invoking the cace method, which is reloading the old asset
+			so just stop doing that
+			Does not need assets to be cached, as only AssetPointers are being compiled to the bundle
+			The Asset is grabbed from an AssetPath when building
+			Assets should not contains AssetPointers, they are standalone!
 		
 	TEST
 
@@ -86,6 +91,10 @@ DONE
 		Loading from AssetPointers DAB using paths works
 		
 		Create HamBam Assets
+		
+		Bring back invoke downwards
+			Imagine an object whose fields appear once you invoke the method
+			simply iterating throught it will miss those objects
 		
 Backlog	
 	TASKS

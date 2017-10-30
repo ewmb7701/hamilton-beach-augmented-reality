@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="Windows-1252"?>
-<Scenario xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<?xml version="1.0"?>
+<Scenario xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <_XmlCache_Pointers>
     <AssetPointer xsi:type="StepCollectionPtr">
       <_AssetInfo>
         <_GUID>b2b2497da06df664f8ac3008c973594c</_GUID>
         <_AssetDatabasePath>Assets/HamiltonBeachAR.Creator/Assets/StepCollections/HowToUseBlade.stepcollection.xml</_AssetDatabasePath>
         <_TypeInfo>
-          <AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.StepCollection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
+          <_AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.StepCollection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
         </_TypeInfo>
       </_AssetInfo>
     </AssetPointer>

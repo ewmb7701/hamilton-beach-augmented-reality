@@ -6,7 +6,7 @@
         <_GUID>e39682ca26c7fab4e9f00f3b3ef2aa46</_GUID>
         <_AssetDatabasePath>Assets/HamiltonBeachAR.Creator/Assets/StepCollections/HowToUseDisc.stepcollection.xml</_AssetDatabasePath>
         <_TypeInfo>
-          <AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.StepCollection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</AssemblyQualifiedName>
+          <_AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.StepCollection, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
         </_TypeInfo>
       </_AssetInfo>
     </AssetPointer>
