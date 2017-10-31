@@ -18,12 +18,12 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         public string _ID = "";
 
         /// <summary>
-        /// The name to display;
+        /// Display name;
         /// </summary>
         public string _Name = "";
 
         /// <summary>
-        /// Description;
+        /// Display description;
         /// </summary>
         public string _Description = "";
 

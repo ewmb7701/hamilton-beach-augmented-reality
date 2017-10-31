@@ -1,7 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Xml.Serialization;
+﻿using SINe.Collections;
 
-using SINe.Collections;
+using UnityEngine;
 
 using SINe.Unity.Utility;
 using SINe.Unity.DynamicAssetBundleFramework;
@@ -17,31 +16,51 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         IOnLoadedFromAssetDatabase
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
-        // Properties, Instance
+        // Methods, Serialzied
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
         /// <summary>
-        /// Return the dictionary;
-        /// Key: ID;
-        /// Value: StepPtr;
+        /// Determine all the AnimationClips in all the StepPtrs;
         /// </summary>
-        [XmlIgnore]
-        public Dictionary<string, StepPtr> Dictionary
+        public AnimationClip[] DetAnimationClips()
         {
-            get
+            AnimationClip[] animationClips = new AnimationClip[_StepPtrs.Count]; // create array
+
+            for (int i = 0; i < _StepPtrs.Count; i++) // for all the StepPtrs
             {
-                return _stepPtrsDict;
+                animationClips[i] = _StepPtrs[i].Asset._AnimationClipPtr.Asset; // add the clip
             }
+
+            return animationClips; // return those clip
         }
 
-        ///////////////////////////////////////////////////////////////////////////////////////////////////
-        // Fields, Instance
-        ///////////////////////////////////////////////////////////////////////////////////////////////////
-
         /// <summary>
-        /// Dictionary for the steps;
+        /// Determine all the Names in all the StepsPtrs;
         /// </summary>
-        private Dictionary<string, StepPtr> _stepPtrsDict = new Dictionary<string, StepPtr>();
+        /// <returns></returns>
+        public string[] DetStepNames()
+        {
+            string[] names = new string[_StepPtrs.Count]; // create array
+
+            for (int i = 0; i < _StepPtrs.Count; i++) // for all the StepPtrs
+            {
+                names[i] = _StepPtrs[i].Asset._Name; // add the clip
+            }
+
+            return names; // return those clip
+        }
+
+        //public Tuple<string, AnimationClip>[] DetAnimationClipPlayables()
+        //{
+        //    Tuple<string, AnimationClip>[] animationClips = new Tuple<string, AnimationClip>[_StepPtrs.Count]; // create array
+
+        //    for (int i = 0; i < _StepPtrs.Count; i++) // for all the StepPtrs
+        //    { 
+        //        animationClips[i] = new Tuple<string, AnimationClip>(_StepPtrs[i].Asset._Name, _StepPtrs[i].Asset._AnimationClipPtr.Asset); // add the clip
+        //    }
+
+        //    return animationClips; // return those clip
+        //}
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // Fields, Serialzied

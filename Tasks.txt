@@ -1,5 +1,7 @@
 DOING
 	DEBUG TASKS
+		Scenarios
+			I haven't tested it at all!
 
 	TASKS	
 		Scenario hookup for DynamicAssetBundles
@@ -36,13 +38,6 @@ DOING
 		A way to edit XmlAssets without going through a DAB
 			need an XmlAssetDatabase of XmlAssets which maps GUID -> XmlAssets
 			Whenever it is looked at in the inspector or loaded or whatever, adds to this Database
-			
-		caching and saving	
-			OnBeforeSave is invoking the cace method, which is reloading the old asset
-			so just stop doing that
-			Does not need assets to be cached, as only AssetPointers are being compiled to the bundle
-			The Asset is grabbed from an AssetPath when building
-			Assets should not contains AssetPointers, they are standalone!
 		
 	TEST
 
@@ -75,10 +70,16 @@ DONE
 		Make UnityAssets not actually create the new asset
 			Technically not Isaveable, then?
 			
+			
 		Basic AR support
 			scene units are in millimieters
 		
+		Make DABComponents have AssetPointers
 		DABModules to regular Top-Level AssetPointers
+				
+		caching and saving	
+			OnBeforeSave is invoking the cace method, which is reloading the old asset
+			so just stop doing that
 			
 	TEST
 		DAB Framework
@@ -97,9 +98,7 @@ DONE
 			simply iterating throught it will miss those objects
 		
 Backlog	
-	TASKS
-		Make DABComponents have AssetPointers
-	
+	TASKS	
 		Bring ScriptableObjects into DynamicAssetBundleSystem
 		convert Logo, Track, and Sfx to use new AssetPointer system
 		Make UnityEngine.Object Asset type in FileExtension Tuple dict
@@ -108,13 +107,22 @@ Backlog
 			DynamicEnum partial classes
 			AestheticAudio TrackIDs called by SceneManager
 			
-		Createa documentation and kanban
-		
+		Create documentation and kanban for all projects
+			Codebase
+			Codebase.Unity
+			HamBam
+			Clash	
+			
+		Convert AudioSourceDict into Playable API
+			
 		Editable ValueVector
 
 		.NET Scripting Runtime Stable
 			Topological graph sorting using tuples instead of edges
-			Field Editor uses nameof field by default
+			
+		SceneManagers have CacheTimeID Property to alert all DABs when the scene is loaded
+			Uncache time
+			Inherit "MANUAL" attribute by default?
 	
 	TEST
 		ValueVector serialization

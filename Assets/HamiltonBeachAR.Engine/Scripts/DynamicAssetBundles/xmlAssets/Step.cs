@@ -16,7 +16,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         /// <summary>
         /// Pointer to AnimationClip to play;
         /// </summary>
-        public AnimationClipPtr _Animation = new AnimationClipPtr();
+        public AnimationClipPtr _AnimationClipPtr = new AnimationClipPtr();
 
         /// <summary>
         /// The speed of the AnimationClip;
@@ -32,7 +32,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
             base.OnEdit_Actual(editorAPI);
 
             //_Animation.OnEdit(editorAPI);
-            _Animation = editorAPI.OnEdit.Field(_Animation, _Animation.OnEditLabel());
+            _AnimationClipPtr = editorAPI.OnEdit.Field(_AnimationClipPtr, _AnimationClipPtr.OnEditLabel());
             _AnimationSpeed = editorAPI.OnEdit.Field(_AnimationSpeed, "Animation Speed");
         }
     }

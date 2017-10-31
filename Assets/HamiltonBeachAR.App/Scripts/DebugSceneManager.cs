@@ -11,7 +11,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
     /// <summary>
     /// SceneManager for a the Debug Scene;
     /// </summary>
-    public class DebugSceneManager : Manager_Scene
+    public class DebugSceneManager : SceneManager<DebugSceneManager>
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // Fields, Inspector
