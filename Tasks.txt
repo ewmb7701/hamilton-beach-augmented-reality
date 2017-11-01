@@ -5,12 +5,6 @@ DOING
 		Better Scenario Scene Frontend
 		
 		Create DABS
-	
-		A way to set all materials recursively
-			MenuItem for it
-			if different material, 
-				GetComponentsInChildren
-				SetMaterial(this Enumerable<RenderThing> renders, Material mat)
 
 		Create Stable "Demo Build"
 				
@@ -84,6 +78,11 @@ DONE
 					Previous
 					Next
 					Playing animations
+			
+		A way to set all materials recursively
+			MenuItem for it
+				GetComponentsInChildren
+				SetMaterial(this Enumerable<RenderThing> renders, Material mat)
 			
 	TEST
 		DAB Framework
