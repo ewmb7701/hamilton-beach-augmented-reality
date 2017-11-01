@@ -1,15 +1,16 @@
-<?xml version="1.0" encoding="Windows-1252"?>
-<Step xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <_Name />
-  <_Description />
-  <_Animation>
+<?xml version="1.0"?>
+<Step xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_Title>Bowl On</_Title>
+  <_Description>Place bowl on base.</_Description>
+  <_AnimationClipPtr>
     <_AssetInfo>
-      <_GUID />
-      <_AssetDatabasePath />
+      <_GUID>6374190ba1f7d6e4fbdb57cfba7fc205</_GUID>
+      <_AssetDatabasePath>Assets/HamiltonBeachAR.Creator/Assets/Animations/BowlOn.anim</_AssetDatabasePath>
       <_TypeInfo>
         <_AssemblyQualifiedName>UnityEngine.AnimationClip, UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
       </_TypeInfo>
     </_AssetInfo>
-  </_Animation>
+  </_AnimationClipPtr>
   <_AnimationSpeed>1</_AnimationSpeed>
+  <_AnimationStartNormalized>0</_AnimationStartNormalized>
 </Step>

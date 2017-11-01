@@ -1,4 +1,5 @@
-﻿using SINe.Unity.DynamicAssetBundleFramework;
+﻿using System;
+using SINe.Unity.DynamicAssetBundleFramework;
 using SINe.Unity.OnEdit;
 using SINe.Unity.Utility;
 
@@ -23,6 +24,11 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         /// </summary>
         public float _AnimationSpeed = 1f;
 
+        /// <summary>
+        /// The normalized start time of the AnimationClip;
+        /// </summary>
+        public float _AnimationStartNormalized = 0f;
+
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // OnEdit
         ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -34,6 +40,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
             //_Animation.OnEdit(editorAPI);
             _AnimationClipPtr = editorAPI.OnEdit.Field(_AnimationClipPtr, _AnimationClipPtr.OnEditLabel());
             _AnimationSpeed = editorAPI.OnEdit.Field(_AnimationSpeed, "Animation Speed");
+            _AnimationStartNormalized = editorAPI.OnEdit.Field(_AnimationStartNormalized, "Animation Start Time, Normalized");
         }
     }
 

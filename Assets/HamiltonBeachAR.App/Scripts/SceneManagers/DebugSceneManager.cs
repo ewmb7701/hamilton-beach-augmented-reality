@@ -30,7 +30,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
 
             _uiText.text = "";
 
-            foreach (DABDebug dabDebug in DABCore.Inst.Database.GetAllOfType<DABDebug>()) // for all DABDebug DynamicAsssetBundles
+            foreach (DebugDAB dabDebug in DABCore.Inst.Database.GetAllOfType<DebugDAB>()) // for all DABDebug DynamicAsssetBundles
             {
                 XmlAsset_Debug asset;
                 if (dabDebug.Assets.TryOutAsset(out asset)) // got the debug component

@@ -1,4 +1,5 @@
-﻿using SINe.Unity.DynamicAssetBundleFramework;
+﻿using SINe;
+using SINe.Unity.DynamicAssetBundleFramework;
 using SINe.Unity.Utility;
 
 namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
@@ -9,18 +10,25 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
     public abstract class ManualContent : XmlAsset
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
+        // Properties
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public string ID
+        {
+            get
+            {
+                return _Title.ToID();
+            }
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
         // Fields, Serialized
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
         /// <summary>
-        /// The ID;
+        /// Display title;
         /// </summary>
-        public string _ID = "";
-
-        /// <summary>
-        /// Display name;
-        /// </summary>
-        public string _Name = "";
+        public string _Title = "";
 
         /// <summary>
         /// Display description;
@@ -38,15 +46,14 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
 
         public override void OnEdit_Actual(IEditorAPI editorAPI)
         {
-            _ID = editorAPI.OnEdit.Field(_ID, "ID");
-            _Name = editorAPI.OnEdit.Field(_Name, "Name");
+            _Title = editorAPI.OnEdit.Field(_Title, "Name");
             _Description = editorAPI.OnEdit.Field(_Description, "Description");
             //_ManaulOffset = editorAPI.OnEdit.Field(_ManaulOffset, "Manual Offset");
         }
 
         public override string ToString()
         {
-            return _ID;
+            return ID;
         }
     }
 }

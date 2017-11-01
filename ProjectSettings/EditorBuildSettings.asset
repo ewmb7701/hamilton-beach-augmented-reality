@@ -6,5 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/HamiltonBeach.App/Scenes/Test.unity
-    guid: 57f7c7236ae04d049b6023cdd4708997
+    path: Assets/HamiltonBeachAR.App/Scenes/load/Init.unity
+    guid: 86daae1e5aa616845b5e0d10af5d7f3a
+  - enabled: 1
+    path: Assets/HamiltonBeachAR.App/Scenes/menu/Main.unity
+    guid: 80f02baaa5a53c7438057d0c76baa5b6
+  - enabled: 1
+    path: Assets/HamiltonBeachAR.App/Scenes/act/Scenario.unity
+    guid: bbe75e4ed7e2faf40992d8da5505cdf3

@@ -1,4 +1,6 @@
-﻿using SINe.Collections;
+﻿using System.Linq;
+
+using SINe.Collections;
 
 using UnityEngine;
 
@@ -16,7 +18,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         IOnLoadedFromAssetDatabase
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
-        // Methods, Serialzied
+        // Methods, Public
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
         /// <summary>
@@ -24,30 +26,25 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         /// </summary>
         public AnimationClip[] DetAnimationClips()
         {
-            AnimationClip[] animationClips = new AnimationClip[_StepPtrs.Count]; // create array
-
-            for (int i = 0; i < _StepPtrs.Count; i++) // for all the StepPtrs
-            {
-                animationClips[i] = _StepPtrs[i].Asset._AnimationClipPtr.Asset; // add the clip
-            }
-
-            return animationClips; // return those clip
+            //Debug.LogFormat("Detreminign. StepPtrs null? {0} element 0 null? {1} Asset null? {2}", _StepPtrs == null, _StepPtrs[0] == null, _StepPtrs[0].Asset == null);
+            return (from stepPtr in _StepPtrs select stepPtr.Asset._AnimationClipPtr.Asset).ToArray();
         }
 
         /// <summary>
         /// Determine all the Names in all the StepsPtrs;
         /// </summary>
         /// <returns></returns>
-        public string[] DetStepNames()
+        public string[] DetStepIDS()
         {
-            string[] names = new string[_StepPtrs.Count]; // create array
+            return (from stepPtr in _StepPtrs select stepPtr.Asset.ID).ToArray();
+        }
 
-            for (int i = 0; i < _StepPtrs.Count; i++) // for all the StepPtrs
-            {
-                names[i] = _StepPtrs[i].Asset._Name; // add the clip
-            }
-
-            return names; // return those clip
+        /// <summary>
+        /// Get a step at the index;
+        /// </summary>
+        public Step GetStep(int index)
+        {
+            return _StepPtrs[index].Asset;
         }
 
         //public Tuple<string, AnimationClip>[] DetAnimationClipPlayables()
@@ -69,7 +66,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         /// <summary>
         /// The StepPtrs to Steps in this StepCollection;
         /// </summary>
-        public ListIterable<StepPtr> _StepPtrs = new ListIterable<StepPtr>();
+        public ListIterable<StepPtr> _StepPtrs = new ListIterable<StepPtr>(); 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // OnEdit

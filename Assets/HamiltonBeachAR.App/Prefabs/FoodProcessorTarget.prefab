@@ -579,8 +579,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4431108662663000}
   - component: {fileID: 114802598397617208}
+  - component: {fileID: 95811074666905070}
   m_Layer: 0
-  m_Name: FoodProcessor
+  m_Name: Hologram
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2804,7 +2805,7 @@ GameObject:
   - component: {fileID: 212843596162776760}
   - component: {fileID: 114918810654348346}
   m_Layer: 0
-  m_Name: TargetMat
+  m_Name: Mat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11241,6 +11242,23 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1488450601698086}
   m_Mesh: {fileID: 4300000, guid: 9afe58305076a51408aef5bfd87a877a, type: 3}
+--- !u!95 &95811074666905070
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1135536198549348}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 291d6fb74ad3bfd4ab71034c2365c6c8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114203647355643072
 MonoBehaviour:
   m_ObjectHideFlags: 1

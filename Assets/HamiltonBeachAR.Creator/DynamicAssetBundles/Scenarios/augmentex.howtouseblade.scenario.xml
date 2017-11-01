@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<Scenario xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ScenarioDAB xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <_XmlCache_Pointers>
     <AssetPointer xsi:type="StepCollectionPtr">
       <_AssetInfo>
@@ -15,4 +15,4 @@
     <_Name>How To Use Blade</_Name>
     <_Creator>AugmentEX</_Creator>
   </_Info>
-</Scenario>
+</ScenarioDAB>

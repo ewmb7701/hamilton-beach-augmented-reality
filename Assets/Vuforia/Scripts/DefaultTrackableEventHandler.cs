@@ -7,6 +7,9 @@ Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
 using UnityEngine;
+
+using SINe.Unity.SceneManaging;
+
 using Vuforia;
 
 /// <summary>
@@ -26,7 +29,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         if (mTrackableBehaviour)
+        {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
+        }
+
     }
 
     #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -77,9 +83,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         foreach (var component in rendererComponents)
             component.enabled = true;
 
-        // Enable colliders:
-        foreach (var component in colliderComponents)
-            component.enabled = true;
+        //// Enable colliders:
+        //foreach (var component in colliderComponents)
+        //    component.enabled = true;
 
         // Enable canvas':
         foreach (var component in canvasComponents)
@@ -97,9 +103,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
         foreach (var component in rendererComponents)
             component.enabled = false;
 
-        // Disable colliders:
-        foreach (var component in colliderComponents)
-            component.enabled = false;
+        //// Disable colliders:
+        //foreach (var component in colliderComponents)
+        //    component.enabled = false;
 
         // Disable canvas':
         foreach (var component in canvasComponents)

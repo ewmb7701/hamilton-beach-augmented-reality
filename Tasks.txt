@@ -1,34 +1,25 @@
 DOING
 	DEBUG TASKS
-		Scenarios
-			I haven't tested it at all!
 
-	TASKS	
-		Scenario hookup for DynamicAssetBundles
-			Scenarios
-				One for each scenario DAB
-				Steps
-					Displaying					
-					Previous
-					Next
-					Repeat
-					Playing animations
-	
+	TASKS		
+		Better Scenario Scene Frontend
+		
 		Create DABS
 	
-		"Debug" DABDatabase mode, which loads directly from files
-		
+		A way to set all materials recursively
+			MenuItem for it
+			if different material, 
+				GetComponentsInChildren
+				SetMaterial(this Enumerable<RenderThing> renders, Material mat)
+
+		Create Stable "Demo Build"
+				
+		PartInfo Scene
+	
 		DAB Build Options
 			Build Type
 				Bundle type
 			Building DABS to another device
-		
-		A way to set all materials recursively
-			Field for Material
-			OnValidate
-				if different material, 
-				GetComponentsInChildren
-				SetMaterial(this Enumerable<RenderThing> renders, Material mat)
 				
 		Recursive CacheTime method
 			Foreach IAssetPointer
@@ -55,6 +46,8 @@ DONE
 		
 		CollectionOnEdit iterator
 		
+		DABFramework Overhaul
+		
 		All IAssetSaveable have ISavePath
 		Recursive SaveAssetToDatabase with no path argument
 		
@@ -69,8 +62,7 @@ DONE
 		
 		Make UnityAssets not actually create the new asset
 			Technically not Isaveable, then?
-			
-			
+					
 		Basic AR support
 			scene units are in millimieters
 		
@@ -80,6 +72,18 @@ DONE
 		caching and saving	
 			OnBeforeSave is invoking the cace method, which is reloading the old asset
 			so just stop doing that
+			
+		.NET Scripting Runtime Stable
+			Topological graph sorting using tuples instead of edges
+		
+		Scenario hookup for DynamicAssetBundles
+			Scenarios
+				One for each scenario DAB
+				Steps
+					Displaying Info		
+					Previous
+					Next
+					Playing animations
 			
 	TEST
 		DAB Framework
@@ -96,12 +100,19 @@ DONE
 		Bring back invoke downwards
 			Imagine an object whose fields appear once you invoke the method
 			simply iterating throught it will miss those objects
+	
+		Scenarios
 		
 Backlog	
-	TASKS	
+	TASKS			
 		Bring ScriptableObjects into DynamicAssetBundleSystem
 		convert Logo, Track, and Sfx to use new AssetPointer system
-		Make UnityEngine.Object Asset type in FileExtension Tuple dict
+		Make UnityEngine.Object Asset type in FileExtension Tuple dict	
+		
+		Add "Resources" DAB Mode
+			Maybe an "loadFromResources" method in addition to the other 2?
+			Everything in a Resources folder
+			loads directly from Resources instead
 		
 		Further Generification of Shared Codebase
 			DynamicEnum partial classes
@@ -113,16 +124,25 @@ Backlog
 			HamBam
 			Clash	
 			
+		Attempt the NamedInputPorts Wrapper Class for Playables
+			Just pass in the mixer playable that will get hooked up
 		Convert AudioSourceDict into Playable API
-			
-		Editable ValueVector
-
-		.NET Scripting Runtime Stable
-			Topological graph sorting using tuples instead of edges
+		
+		Save, Build, Cache With TargetAttributeObjectTreeTraverser
+			init with Types Attribute Type, Target Type, 
+				check if the types attribute has target type	
+				RecursiveAssetOperations(typeof(ISaveToAssetDatabase), typeof(IOnLoadedFromAssetDatabase)]
+			initialize all trees with validator and visitor decorator objects?
+			No longer need to call operations recurisvely on private asset fields
+			No longer need "add to asset paths"
 			
 		SceneManagers have CacheTimeID Property to alert all DABs when the scene is loaded
 			Uncache time
 			Inherit "MANUAL" attribute by default?
+	
+		AppRoot Script which destroys itself upon Awake if another exists in the scene
+		
+		Editable ValueVector
 	
 	TEST
 		ValueVector serialization
