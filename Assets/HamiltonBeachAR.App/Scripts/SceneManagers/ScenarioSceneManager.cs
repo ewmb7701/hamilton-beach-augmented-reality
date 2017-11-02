@@ -7,9 +7,12 @@ using UnityEngine.Animations;
 using UnityEngine.Playables;
 
 using SINe.Unity.Playables;
-using SINe.Unity.AugmentedReality;
 using SINe.Unity.SceneManaging;
 using SINe.Unity.DynamicAssetBundleFramework;
+
+using Vuforia;
+
+using SINe.Unity.Vuforia;
 
 using AugmentEX.HamiltonBeachAR.DynamicAssetBundles;
 
@@ -23,7 +26,9 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
     /// In case multiple ScenarioDAB Types;
     /// </thoughts>
     [Before(typeof(MonoBehaviour))]
-    public class ScenarioSceneManager : HologramSceneManager<ScenarioSceneManager>
+    public class ScenarioSceneManager : MainTrackableSceneManager<ScenarioSceneManager>, 
+        IOnMainTrackableFound, 
+        IOnMainTrackableLost
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // Step Methods
@@ -59,6 +64,20 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
             {
                 return false;
             }
+        }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+        // Methods, Handlers
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+        public void OnMainTrackableLost(TrackableBehaviour.Status previousStatus)
+        {
+            _playableGraph.TryStop();
+        }
+
+        public void OnMainTrackableFound(TrackableBehaviour.Status previousStatus)
+        {
+            _playableGraph.TryPlay();
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -262,11 +281,11 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
             _stepCount = _dabStepCollection._StepPtrs.Count; // the count steps
 
             // debug printouts
-            Debug.LogFormat("Step Count {0}", _stepCount);
-            foreach (string stepID in _dabStepCollection.DetStepIDS())
-            {
-                Debug.LogFormat("Step ID {0}", stepID);
-            }
+            //Debug.LogFormat("Step Count {0}", _stepCount);
+            //foreach (string stepID in _dabStepCollection.DetStepIDS())
+            //{
+            //    Debug.LogFormat("Step ID {0}", stepID);
+            //}
 
             startDo_MakePlayable(_dabStepCollection); // cache playable
 
@@ -320,12 +339,25 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         // Dead
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            _playableGraph.TryDestroy();
+        }
+
+        protected override void OnEnable()
+        {
+            base.OnEnable();
+
+            _playableGraph.TryPlay();
+        }
+
         protected override void OnDisable()
         {
-            if (_playableGraph.IsValid()) // if valid PlayableGraph
-            {
-                _playableGraph.Destroy(); // destroy the playable graph
-            }
+            base.OnDisable();
+
+            _playableGraph.TryStop();
         }
 
         protected override void Update()

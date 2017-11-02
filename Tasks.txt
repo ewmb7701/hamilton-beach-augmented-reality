@@ -1,10 +1,15 @@
 DOING
 	DEBUG TASKS
 
-	TASKS		
-		Better Scenario Scene Frontend
-		
+	TASKS
+		Even More Scenario Frontend
+			Better scenario layout
+			Automatically populate sidemenu with Scenarios
+			Disabling renderers when  losing MainTrackable
+				
 		Create DABS
+		
+		Solution for canvas space position toggler (look at wooshes)
 
 		Create Stable "Demo Build"
 				
@@ -83,7 +88,12 @@ DONE
 			MenuItem for it
 				GetComponentsInChildren
 				SetMaterial(this Enumerable<RenderThing> renders, Material mat)
-			
+		
+		AR Hookups
+			AR indicator
+			Main Trackable
+			Event system
+					
 	TEST
 		DAB Framework
 			Saving "Works"
@@ -103,25 +113,40 @@ DONE
 		Scenarios
 		
 Backlog	
-	TASKS			
+	TASKS					
+		DABFramework -> DynamicAssetFramework
+			Dynamic Asset dictates how assets are to be layed out, editable, etc.
+			DAFramework is more of a "hard-code asset template" that dictates "how assets should be arranged"
+			DynamicAssetBundle class -> DynamicAssetRoot
+			
+			Resources Mode
+				Maybe an "loadFromResources" method in addition to the other 2?
+				Everything is in a Resources folder
+				loads directly from Resources instead
+				Loading up all from resources
+		
 		Bring ScriptableObjects into DynamicAssetBundleSystem
 		convert Logo, Track, and Sfx to use new AssetPointer system
-		Make UnityEngine.Object Asset type in FileExtension Tuple dict	
-		
-		Add "Resources" DAB Mode
-			Maybe an "loadFromResources" method in addition to the other 2?
-			Everything in a Resources folder
-			loads directly from Resources instead
+		Make all UnityEngine.Object Asset types in FileExtension Tuple dict	
 		
 		Further Generification of Shared Codebase
 			DynamicEnum partial classes
 			AestheticAudio TrackIDs called by SceneManager
 			
 		Create documentation and kanban for all projects
+			Kanban
+				Kanbanchi?
+			Documentation
+				Google?
 			Codebase
 			Codebase.Unity
 			HamBam
 			Clash	
+			
+		Better Woosh Script
+			As I discussed, moving from current position to target
+			Also use curves for further generification
+			Possibly tie into th PositionLerper?
 			
 		Attempt the NamedInputPorts Wrapper Class for Playables
 			Just pass in the mixer playable that will get hooked up
@@ -140,6 +165,12 @@ Backlog
 			Inherit "MANUAL" attribute by default?
 	
 		AppRoot Script which destroys itself upon Awake if another exists in the scene
+		
+		DuoBehaviour tries to register/ unregister to all Core instances
+			Extension method for this process
+			this.CoreHandlersRegister();
+			MAKE SURE TO REMOVE ALL MANUAL CALLS!
+				Might just be easier to rename wthout refactoring to break everything so that way I know where they are!
 		
 		Editable ValueVector
 	

@@ -9,12 +9,24 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
     /// </summary>
     public class MainMenuSceneManager : SceneManager<MainMenuSceneManager>
     {
-        protected override void Start()
-        {
-            base.Start();
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
+        // Alive
+        ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-            Debug.LogWarningFormat("Loading Debug ScenarioDAB...");
-            ScenarioSceneManager.TryLoadScenarioSceneWithScearioDABID(ScenarioSceneManager.DebugDABID); // do debug load
+        protected override void Update()
+        {
+            base.Update();
+
+            debugTryLoadScenario();
+        }
+
+        private void debugTryLoadScenario()
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Debug.LogWarningFormat("Loading Debug ScenarioDAB...");
+                ScenarioSceneManager.TryLoadScenarioSceneWithScearioDABID(ScenarioSceneManager.DebugDABID); // do debug load
+            }
         }
     }
 }
