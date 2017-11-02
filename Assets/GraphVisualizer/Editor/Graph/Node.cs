@@ -41,28 +41,28 @@ namespace GraphVisualizer
             return 1 + GetDepthRecursive(node.parent);
         }
 
-        public virtual Type GetContentType()
+        virtual public Type GetContentType()
         {
             return content == null ? null : content.GetType();
         }
 
-        public virtual string GetContentTypeName()
+        virtual public string GetContentTypeName()
         {
             Type type = GetContentType();
             return type == null ? "Null" : type.ToString();
         }
 
-        public virtual string GetContentTypeShortName()
+        virtual public string GetContentTypeShortName()
         {
             return GetContentTypeName().Split('.').Last();
         }
 
-        public override string ToString()
+        override public string ToString()
         {
             return "Node content: " + GetContentTypeName();
         }
 
-        public virtual Color GetColor()
+        virtual public Color GetColor()
         {
             Type type = GetContentType();
             if (type == null)

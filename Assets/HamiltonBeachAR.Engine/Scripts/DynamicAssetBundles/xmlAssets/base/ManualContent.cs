@@ -44,14 +44,14 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         // OnEdit
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public override void OnEdit_Actual(IEditorAPI editorAPI)
+        override public void OnEdit_Actual(IEditorAPI editorAPI)
         {
             _Title = editorAPI.OnEdit.Field(_Title, "Name");
             _Description = editorAPI.OnEdit.Field(_Description, "Description");
             //_ManaulOffset = editorAPI.OnEdit.Field(_ManaulOffset, "Manual Offset");
         }
 
-        public override string ToString()
+        override public string ToString()
         {
             return ID;
         }

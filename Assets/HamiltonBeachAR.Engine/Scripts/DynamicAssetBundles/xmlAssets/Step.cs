@@ -33,7 +33,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         // OnEdit
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public override void OnEdit_Actual(IEditorAPI editorAPI)
+        override public void OnEdit_Actual(IEditorAPI editorAPI)
         {
             base.OnEdit_Actual(editorAPI);
 

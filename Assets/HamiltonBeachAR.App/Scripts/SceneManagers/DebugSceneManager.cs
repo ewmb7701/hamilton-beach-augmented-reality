@@ -24,7 +24,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         // Methods
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        protected override void Start()
+        override protected void Start()
         {
             base.Start();
 

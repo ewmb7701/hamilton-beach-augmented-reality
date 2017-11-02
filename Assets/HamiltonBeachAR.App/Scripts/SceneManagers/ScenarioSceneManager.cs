@@ -26,13 +26,35 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
     /// In case multiple ScenarioDAB Types;
     /// </thoughts>
     [Before(typeof(MonoBehaviour))]
-    public class ScenarioSceneManager : MainTrackableSceneManager<ScenarioSceneManager>, 
-        IOnMainTrackableFound, 
-        IOnMainTrackableLost
+    public class ScenarioSceneManager : MainTrackableSceneManager<ScenarioSceneManager>
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // Step Methods
         ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+        /// <summary>
+        /// Go to next step;
+        /// </summary>
+        public void StepNext()
+        {
+            TryStepNext();
+        }
+
+        /// <summary>
+        /// Go to prev step;
+        /// </summary>
+        public void StepPrev()
+        {
+            TryStepPrev();
+        }
+
+        /// <summary>
+        /// Repeat the step;
+        /// </summary>
+        public void StepRestart()
+        {
+            stepAnimationStart(_stepCurrentIndex); // restart the curent step
+        }
 
         /// <summary>
         /// Go to next step;
@@ -70,13 +92,17 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         // Methods, Handlers
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public void OnMainTrackableLost(TrackableBehaviour.Status previousStatus)
+        override public void OnMainTrackableLost(TrackableBehaviour.Status previousStatus)
         {
+            base.OnMainTrackableLost(previousStatus);
+
             _playableGraph.TryStop();
         }
 
-        public void OnMainTrackableFound(TrackableBehaviour.Status previousStatus)
+        override public void OnMainTrackableFound(TrackableBehaviour.Status previousStatus)
         {
+            base.OnMainTrackableFound(previousStatus);
+
             _playableGraph.TryPlay();
         }
 
@@ -190,6 +216,12 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
         /// <summary>
+        /// The Text Component to show scenario name;
+        /// </summary>
+        [SerializeField]
+        private Text _textScenarioName;
+
+        /// <summary>
         /// The Text Component to show step name;
         /// </summary>
         [SerializeField]
@@ -254,7 +286,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         // Fields, Instance
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        protected override void Start()
+        override protected void Start()
         {
             base.Start();
 
@@ -276,6 +308,8 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         {
             _dab = newDAB; // set the scenario dab to be the queued one
             _dab.RecursiveCacheAssets(_dab.AssetBundle); // recursively cache the DAB
+
+            _textScenarioName.text = _dab._Info._Name; // set the name text
 
             _dabStepCollection = _dab.Assets.GetAsset<StepCollection>(); // cache the step collection
             _stepCount = _dabStepCollection._StepPtrs.Count; // the count steps
@@ -310,7 +344,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
             //string[] stepNames = stepCollection.DetStepIDS(); // determine the step names
             //Tuple<string, AnimationClipPlayable>[] animationTuples = CollectionsUtility.ToTupleArray(stepNames, animationClipPlayables); // create the tuple array
             //_mixerPlayable = MixerPlayableBehaviour<AnimationClipPlayable>.CreateScriptPlayable(_playableGraph, animationTuples, out _mixerBehaviour); // create the mixer
-            
+
             // pause all clips
             //foreach (AnimationClipPlayable playable in _mixerBehaviour) // for all clips
             //{
@@ -321,7 +355,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
             AnimationClipPlayable[] animationClipPlayables = stepCollection.DetAnimationClips().CreatePlayables(_playableGraph); // create AnimationClipPlayables from the StepCollection
             _mixerPlayable = AnimationMixerPlayable.Create(_playableGraph, animationClipPlayables.Length);
             _mixerPlayable.SetInputCount(animationClipPlayables.Length); // set input ports for mixer
-            for(int sourcePort = 0; sourcePort < animationClipPlayables.Length; sourcePort++) // for each input port
+            for (int sourcePort = 0; sourcePort < animationClipPlayables.Length; sourcePort++) // for each input port
             {
                 _mixerPlayable.ConnectInput(sourcePort, animationClipPlayables[sourcePort], 0); // connect sourcePlayable(0)->(n)animaxtionMixer
                 _mixerPlayable.SetInputWeight(sourcePort, 1); // weight of 1
@@ -339,28 +373,28 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         // Dead
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        protected override void OnDestroy()
+        override protected void OnDestroy()
         {
             base.OnDestroy();
 
             _playableGraph.TryDestroy();
         }
 
-        protected override void OnEnable()
+        override protected void OnEnable()
         {
             base.OnEnable();
 
             _playableGraph.TryPlay();
         }
 
-        protected override void OnDisable()
+        override protected void OnDisable()
         {
             base.OnDisable();
 
             _playableGraph.TryStop();
         }
 
-        protected override void Update()
+        override protected void Update()
         {
             base.Update();
 

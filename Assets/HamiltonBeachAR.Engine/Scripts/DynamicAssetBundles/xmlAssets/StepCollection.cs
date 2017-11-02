@@ -74,7 +74,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
 
         private OnEditCollectionIterable_List<StepPtr, ListIterable<StepPtr>> _onEdit_Steps;
 
-        public override void OnEdit_Actual(IEditorAPI editorAPI)
+        override public void OnEdit_Actual(IEditorAPI editorAPI)
         {
             _onEdit_Steps.OnEdit(editorAPI); // new onEdit for the steps
         }

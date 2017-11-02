@@ -12,7 +12,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         // Mono Method
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        protected override void Start()
+        override protected void Start()
         {
             base.Start();
 

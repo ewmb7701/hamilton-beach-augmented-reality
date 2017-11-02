@@ -44,7 +44,7 @@ public class PlayableNode : SharedPlayableNode
     {
     }
 
-    public override Type GetContentType()
+    override public Type GetContentType()
     {
         Playable p = Playable.Null;
         try
@@ -58,7 +58,7 @@ public class PlayableNode : SharedPlayableNode
         return !p.IsValid() ? null : p.GetPlayableType();
     }
 
-    public override string GetContentTypeShortName()
+    override public string GetContentTypeShortName()
     {
         // Remove the extra Playable at the end of the Playable types.
         string shortName = base.GetContentTypeShortName();
@@ -66,7 +66,7 @@ public class PlayableNode : SharedPlayableNode
         return string.IsNullOrEmpty(cleanName) ? shortName : cleanName;
     }
 
-    public override string ToString()
+    override public string ToString()
     {
         var sb = new StringBuilder();
 
@@ -99,7 +99,7 @@ public class PlayableOutputNode : SharedPlayableNode
     {
     }
 
-    public override Type GetContentType()
+    override public Type GetContentType()
     {
         PlayableOutput p = PlayableOutput.Null;
         try
@@ -113,7 +113,7 @@ public class PlayableOutputNode : SharedPlayableNode
         return !p.IsOutputValid() ? null : p.GetPlayableOutputType();
     }
 
-    public override string GetContentTypeShortName()
+    override public string GetContentTypeShortName()
     {
         // Remove the extra Playable at the end of the Playable types.
         string shortName = base.GetContentTypeShortName();
@@ -121,7 +121,7 @@ public class PlayableOutputNode : SharedPlayableNode
         return string.IsNullOrEmpty(cleanName) ? shortName : cleanName;
     }
 
-    public override string ToString()
+    override public string ToString()
     {
         var sb = new StringBuilder();
 
@@ -144,7 +144,7 @@ public class PlayableGraphVisualizer : Graph
         m_PlayableGraph = playableGraph;
     }
 
-    protected override void Populate()
+    override protected void Populate()
     {
         if (!m_PlayableGraph.IsValid())
             return;
@@ -160,7 +160,7 @@ public class PlayableGraphVisualizer : Graph
         }
     }
 
-    protected override IEnumerable<Node> GetChildren(Node node)
+    override protected IEnumerable<Node> GetChildren(Node node)
     {
         // Children are the Playable Inputs.
         if(node is PlayableNode)

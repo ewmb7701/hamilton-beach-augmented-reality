@@ -21,7 +21,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         // OnEdit
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public override void OnEdit_Actual(IEditorAPI editorAPI)
+        override public void OnEdit_Actual(IEditorAPI editorAPI)
         {
             //_PartID = editorAPI.OnEdit.Popup_Enum<PartID>(_PartID, "Part ID"); // part id
 

@@ -13,7 +13,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         // Alive
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        protected override void Update()
+        override protected void Update()
         {
             base.Update();
 

@@ -193,7 +193,7 @@ public class PlayableGraphVisualizerWindow : EditorWindow, IHasCustomMenu
 
 #region Custom_Menu
 
-    public virtual void AddItemsToMenu(GenericMenu menu)
+    virtual public void AddItemsToMenu(GenericMenu menu)
     {
         menu.AddItem(new GUIContent("Legend"), m_GraphSettings.showLegend, ToggleLegend);
         menu.AddItem(new GUIContent("Auto Scan Scene"), m_AutoScanScene, ToggleAutoScanScene);
