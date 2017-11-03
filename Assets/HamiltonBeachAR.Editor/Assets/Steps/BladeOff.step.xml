@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Step xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_ID>SOMEOID</_ID>
+  <_Name />
+  <_Description />
+  <_Animation>
+    <_AssetInfo>
+      <_GUID>6374190ba1f7d6e4fbdb57cfba7fc205</_GUID>
+      <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Animations/BowlOn.anim</_AssetDatabasePath>
+      <_TypeInfo>
+        <_AssemblyQualifiedName>UnityEngine.AnimationClip, UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+      </_TypeInfo>
+    </_AssetInfo>
+  </_Animation>
+  <_AnimationSpeed>1</_AnimationSpeed>
+</Step>

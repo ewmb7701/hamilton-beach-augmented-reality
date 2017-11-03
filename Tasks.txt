@@ -3,8 +3,18 @@ DOING
 
 	TASKS				
 		canvas space position lerping for sidemenu (look at wooshes)
+			Algorithm
+				Give canvas in method
+				determine the position to target
+					"where is my position relative to the position relative to canvas"
+					Find the corners of the canvas and do something with that?
+				Determine distance for pivot
+				calculate rect offsets for pivot
+				adjust for that
+			
 			Lerp On Canvas
 			Lerp Off Canvas
+			
 			
 		LerpOut the SideMenu when things happen
 			Load Scene
