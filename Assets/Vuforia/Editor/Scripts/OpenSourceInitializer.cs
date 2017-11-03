@@ -17,7 +17,7 @@ using Vuforia.EditorClasses;
 /// Do not modify.
 /// </summary>
 [InitializeOnLoad]
-public static class OpenSourceInitializer
+static public class OpenSourceInitializer
 {
     static OpenSourceInitializer()
     {

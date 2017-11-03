@@ -7,10 +7,10 @@ using UnityEngine.Playables;
 // and the EditorWindow will register itself with the client to display any available graph.
 public class GraphVisualizerClient
 {
-    private static GraphVisualizerClient s_Instance;
+    static private GraphVisualizerClient s_Instance;
     private Dictionary<PlayableGraph, string> m_Graphs = new Dictionary<PlayableGraph, string>();
 
-    public static GraphVisualizerClient instance
+    static public GraphVisualizerClient instance
     {
         get
         {
@@ -23,14 +23,14 @@ public class GraphVisualizerClient
     {
         m_Graphs.Clear();
     }
-    public static void Show(PlayableGraph graph, string name)
+    static public void Show(PlayableGraph graph, string name)
     {
         if (!instance.m_Graphs.ContainsKey(graph))
         {
             instance.m_Graphs.Add(graph, name);
         }
     }
-    public static void Hide(PlayableGraph graph)
+    static public void Hide(PlayableGraph graph)
     {
         if (instance.m_Graphs.ContainsKey(graph))
         {
@@ -38,7 +38,7 @@ public class GraphVisualizerClient
         }
     }
 
-    public static IEnumerable<KeyValuePair<PlayableGraph, string>> GetGraphs()
+    static public IEnumerable<KeyValuePair<PlayableGraph, string>> GetGraphs()
     {
         return instance.m_Graphs;
     }

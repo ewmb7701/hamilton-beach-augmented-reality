@@ -1,5 +1,5 @@
 ﻿using SINe.Unity.Managers;
-using SINe.Unity.SceneManaging;
+using SINe.Unity.SceneManagement;
 
 namespace AugmentEX.HamiltonBeachAR.SceneManagers
 {
@@ -16,7 +16,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         {
             base.Start();
 
-            SceneManagerCore.Inst.LoadSceneWhenValid(ScenePID.Menu_Main); // load Menu/Main
+            SceneManagerCore.I.LoadSceneWhenValid(ScenePID.Menu_Main); // load Menu/Main
         }
     }
 }

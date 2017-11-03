@@ -9,15 +9,15 @@ using UnityEngine;
 public class ReingoldTilford : IGraphLayout
 {
     // By convention, all graph layout algorithms should have a minimum distance of 1 unit between nodes
-    private static readonly float s_DistanceBetweenNodes = 1.0f;
+    static private readonly float s_DistanceBetweenNodes = 1.0f;
 
     // Used to specify the vertical distance two non-attached trees in the graph.
-    private static readonly float s_VerticalDistanceBetweenTrees = 3.0f;
+    static private readonly float s_VerticalDistanceBetweenTrees = 3.0f;
 
     // Used to lengthen the wire when lots of children are connected. If 1, all levels will be evenly separated
-    private static readonly float s_WireLengthFactorForLargeSpanningTrees = 3.0f;
+    static private readonly float s_WireLengthFactorForLargeSpanningTrees = 3.0f;
 
-    private static readonly float s_MaxChildrenThreshold = 6.0f;
+    static private readonly float s_MaxChildrenThreshold = 6.0f;
 
     // Helper structure to easily find the vertex associated to a given Node.
     private readonly Dictionary<Node, Vertex> m_NodeVertexLookup = new Dictionary<Node, Vertex>();

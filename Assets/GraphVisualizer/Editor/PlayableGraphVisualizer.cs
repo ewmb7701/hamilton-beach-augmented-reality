@@ -215,7 +215,7 @@ public class PlayableGraphVisualizer : Graph
         return new PlayableOutputNode(h);
     }
 
-    private static bool HasValidOuputs(Playable h)
+    static private bool HasValidOuputs(Playable h)
     {
         for (int port = 0; port < h.GetOutputCount(); ++port)
         {

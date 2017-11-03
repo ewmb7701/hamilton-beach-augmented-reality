@@ -11270,6 +11270,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420948ad92c83f44da0f250749275aae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onTrackingStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _onTrackingFound:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  _onTrackingLost:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114409105791904058
 MonoBehaviour:
   m_ObjectHideFlags: 1

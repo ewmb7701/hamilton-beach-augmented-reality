@@ -9,27 +9,27 @@ using UnityEngine.Playables;
 
 public class DefaultGraphRenderer : IGraphRenderer
 {
-    private static readonly Color s_EdgeColorMin = new Color(1.0f, 1.0f, 1.0f, 0.1f);
-    private static readonly Color s_EdgeColorMax = Color.white;
-    private static readonly Color s_LegendBackground = new Color(0, 0, 0, 0.1f);
+    static private readonly Color s_EdgeColorMin = new Color(1.0f, 1.0f, 1.0f, 0.1f);
+    static private readonly Color s_EdgeColorMax = Color.white;
+    static private readonly Color s_LegendBackground = new Color(0, 0, 0, 0.1f);
 
-    private static readonly float s_BorderSize = 15;
-    private static readonly float s_LegendFixedOverheadWidth = 100;
-    private static readonly float s_DefaultMaximumNormalizedNodeSize = 0.8f;
-    private static readonly float s_DefaultMaximumNodeSizeInPixels = 100.0f;
-    private static readonly float s_DefaultAspectRatio = 1.5f;
+    static private readonly float s_BorderSize = 15;
+    static private readonly float s_LegendFixedOverheadWidth = 100;
+    static private readonly float s_DefaultMaximumNormalizedNodeSize = 0.8f;
+    static private readonly float s_DefaultMaximumNodeSizeInPixels = 100.0f;
+    static private readonly float s_DefaultAspectRatio = 1.5f;
 
-    private static readonly int s_NodeMaxFontSize = 14;
+    static private readonly int s_NodeMaxFontSize = 14;
 
     private GUIStyle m_LegendLabelStyle;
     private GUIStyle m_SubTitleStyle;
     private GUIStyle m_InspectorStyle;
     private GUIStyle m_NodeRectStyle;
 
-    private static readonly int s_ActiveNodeThickness = 2;
-    private static readonly int s_SelectedNodeThickness = 4;
-    private static readonly Color s_ActiveNodeColor = Color.white;
-    private static readonly Color s_SelectedNodeColor = Color.yellow;
+    static private readonly int s_ActiveNodeThickness = 2;
+    static private readonly int s_SelectedNodeThickness = 4;
+    static private readonly Color s_ActiveNodeColor = Color.white;
+    static private readonly Color s_SelectedNodeColor = Color.yellow;
 
     private readonly Dictionary<string, NodeTypeLegend> m_LegendForType = new Dictionary<string, NodeTypeLegend>();
 
@@ -372,7 +372,7 @@ public class DefaultGraphRenderer : IGraphRenderer
     }
 
     // Apply node constraints to node size
-    private static Vector2 ComputeNodeSize(Vector2 scale, GraphSettings graphSettings)
+    static private Vector2 ComputeNodeSize(Vector2 scale, GraphSettings graphSettings)
     {
         var extraTickness = (s_SelectedNodeThickness + s_ActiveNodeThickness) * 2.0f;
         var nodeSize = new Vector2(graphSettings.maximumNormalizedNodeSize * scale.x - extraTickness,
@@ -405,7 +405,7 @@ public class DefaultGraphRenderer : IGraphRenderer
         return nodeSize;
     }
 
-    private static int ComputeFontSize(Vector2 nodeSize, string text)
+    static private int ComputeFontSize(Vector2 nodeSize, string text)
     {
         if (string.IsNullOrEmpty(text))
             return s_NodeMaxFontSize;
@@ -426,7 +426,7 @@ public class DefaultGraphRenderer : IGraphRenderer
     }
 
     // Convert vertex position from normalized layout to render rect
-    private static Vector2 ScaleVertex(Vector2 v, Vector2 offset, Vector2 scaleFactor)
+    static private Vector2 ScaleVertex(Vector2 v, Vector2 offset, Vector2 scaleFactor)
     {
         return new Vector2((v.x + offset.x) * scaleFactor.x, (v.y + offset.y) * scaleFactor.y);
     }
@@ -442,7 +442,7 @@ public class DefaultGraphRenderer : IGraphRenderer
     }
 
     // Compute the tangents for the graphLayout edges. Assumes that graphLayout is drawn from left to right
-    private static void GetTangents(Vector2 start, Vector2 end, out Vector3[] points, out Vector3[] tangents)
+    static private void GetTangents(Vector2 start, Vector2 end, out Vector3[] points, out Vector3[] tangents)
     {
         points = new Vector3[] {start, end};
         tangents = new Vector3[2];
@@ -455,7 +455,7 @@ public class DefaultGraphRenderer : IGraphRenderer
         tangents[1] = end + new Vector2((end.x - start.x) * -weight - minTangent, 0) * cleverness;
     }
 
-    private static void DrawEdge(Vector2 a, Vector2 b, float weight)
+    static private void DrawEdge(Vector2 a, Vector2 b, float weight)
     {
         Vector3[] points, tangents;
 

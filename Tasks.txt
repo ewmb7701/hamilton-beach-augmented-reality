@@ -1,19 +1,20 @@
 DOING
 	DEBUG TASKS
 
-	TASKS
-		Functional Frontend
-			Scene title
-			Scene picking in SideMenu
-				Vertical layout group
-				
-		PartInfo Scene
-		
+	TASKS				
 		canvas space position lerping for sidemenu (look at wooshes)
-		
-		Create DABS
+			Lerp On Canvas
+			Lerp Off Canvas
+			
+		LerpOut the SideMenu when things happen
+			Load Scene
+			Turning device
+					
+		Scenario DABS
 		
 		Create Stable "Demo Build" On Phone
+		
+		PartInfo Scene
 			
 		More Scenario Scene Frontend	
 			currentStep / maxSteps display
@@ -89,7 +90,9 @@ DONE
 			Better scenario layout
 			Disabling GameObject when losing MainTrackable
 			Sliding Menu
-			
+			Scene title
+			Scene picking in SideMenu
+				Vertical layout group
 					
 	TEST
 		DAB Framework

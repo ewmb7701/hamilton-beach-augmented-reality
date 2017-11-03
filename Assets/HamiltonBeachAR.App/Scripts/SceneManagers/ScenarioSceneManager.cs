@@ -7,7 +7,7 @@ using UnityEngine.Animations;
 using UnityEngine.Playables;
 
 using SINe.Unity.Playables;
-using SINe.Unity.SceneManaging;
+using SINe.Unity.SceneManagement;
 using SINe.Unity.DynamicAssetBundleFramework;
 
 using Vuforia;
@@ -15,6 +15,7 @@ using Vuforia;
 using SINe.Unity.Vuforia;
 
 using AugmentEX.HamiltonBeachAR.DynamicAssetBundles;
+using AugmentEX.HamiltonBeachAR.Managers;
 
 namespace AugmentEX.HamiltonBeachAR.SceneManagers
 {
@@ -25,7 +26,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
     /// I could, in theory, make this a base Type with a Type param for a Scenario DAB Type;
     /// In case multiple ScenarioDAB Types;
     /// </thoughts>
-    [Before(typeof(MonoBehaviour))]
+    [Before(typeof(MonoBehaviour))] // before anything tells what to do with this content
     public class ScenarioSceneManager : MainTrackableSceneManager<ScenarioSceneManager>
     {
         ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -306,6 +307,8 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         /// </summary>
         private void startDo(ScenarioDAB newDAB)
         {
+            SceneTitleText.Component.text = newDAB._Info._Name; // set the SceneTitleText to be the name of the scenario
+
             _dab = newDAB; // set the scenario dab to be the queued one
             _dab.RecursiveCacheAssets(_dab.AssetBundle); // recursively cache the DAB
 
@@ -339,19 +342,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
             _playableGraph = PlayableGraph.Create();
             _playableGraph.SetTimeUpdateMode(DirectorUpdateMode.GameTime); // set update mode
 
-            // create the Mixer (an attempt was made with this playable script. It didn't work!)
-            //AnimationClipPlayable[] animationClipPlayables = stepCollection.DetAnimationClips().CreatePlayables(_playableGraph); // create AnimationClipPlayables from the StepCollection
-            //string[] stepNames = stepCollection.DetStepIDS(); // determine the step names
-            //Tuple<string, AnimationClipPlayable>[] animationTuples = CollectionsUtility.ToTupleArray(stepNames, animationClipPlayables); // create the tuple array
-            //_mixerPlayable = MixerPlayableBehaviour<AnimationClipPlayable>.CreateScriptPlayable(_playableGraph, animationTuples, out _mixerBehaviour); // create the mixer
-
-            // pause all clips
-            //foreach (AnimationClipPlayable playable in _mixerBehaviour) // for all clips
-            //{
-            //    playable.SetPlayState(PlayState.Paused); // pause that clip
-            //}
-
-            // create the mixer with built in stuff
+            // create the Animation mixer
             AnimationClipPlayable[] animationClipPlayables = stepCollection.DetAnimationClips().CreatePlayables(_playableGraph); // create AnimationClipPlayables from the StepCollection
             _mixerPlayable = AnimationMixerPlayable.Create(_playableGraph, animationClipPlayables.Length);
             _mixerPlayable.SetInputCount(animationClipPlayables.Length); // set input ports for mixer
@@ -394,34 +385,6 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
             _playableGraph.TryStop();
         }
 
-        override protected void Update()
-        {
-            base.Update();
-
-            debug_NextStep();
-            debug_PrevStep();
-        }
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////
-        // Methods, Debug
-        ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-        private void debug_NextStep()
-        {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                TryStepNext();
-            }
-        }
-
-        private void debug_PrevStep()
-        {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                TryStepPrev();
-            }
-        }
-
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // Methods, Static
         ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -430,13 +393,13 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         /// Load the Scenario scene for a given Scenario DABID;
         /// </summary>
         /// <param name="DABID">The DAB ID for the scenario DAB;</param>
-        public static bool TryLoadScenarioSceneWithScearioDABID(string DABID)
+        static public bool TryLoadScenarioSceneWithScearioDABID(string DABID)
         {
-            ScenarioDAB newScenario;
-            if (DABCore.Inst.Database.TryOut(DABID, out newScenario)) // got scenario with DABID
+            ScenarioDAB newScenario; // prsospective scenario
+            if (DABCore.I.Database.TryOut(DABID, out newScenario)) // got scenario with DABID
             {
                 _queuedScenarioDAB = newScenario; // set the queued Scenario DAB
-                SceneManagerCore.Inst.LoadSceneWhenValid(ScenePID.Scenario); // load the scenario scene when should
+                SceneManagerCore.I.LoadSceneWhenValid(ScenePID.Scenario); // load the scenario scene when should
                 return true;
             }
             else // did not got DAB
@@ -446,14 +409,8 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         }
 
         /// <summary>
-        /// The queued scenario for this scene;
+        /// The queued Scenario DAB for when this Scene loads;
         /// </summary>
-        private static ScenarioDAB _queuedScenarioDAB;
-
-        ///////////////////////////////////////////////////////////////////////////////////////////////////
-        // Debug
-        ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-        public const string DebugDABID = "augmentex.howtousedisc.scenario";
+        static private ScenarioDAB _queuedScenarioDAB;
     }
 }

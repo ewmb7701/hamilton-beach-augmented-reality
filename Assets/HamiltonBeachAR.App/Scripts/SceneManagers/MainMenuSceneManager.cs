@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿using SINe.Unity.Managers;
 
-using SINe.Unity.Managers;
+using AugmentEX.HamiltonBeachAR.Managers;
 
 namespace AugmentEX.HamiltonBeachAR.SceneManagers
 {
@@ -13,20 +13,11 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagers
         // Alive
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        override protected void Update()
+        override protected void Start()
         {
-            base.Update();
+            base.Start();
 
-            debugTryLoadScenario();
-        }
-
-        private void debugTryLoadScenario()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Debug.LogWarningFormat("Loading Debug ScenarioDAB...");
-                ScenarioSceneManager.TryLoadScenarioSceneWithScearioDABID(ScenarioSceneManager.DebugDABID); // do debug load
-            }
+            SceneTitleText.Component.text = "Main Menu"; // set the scene title
         }
     }
 }

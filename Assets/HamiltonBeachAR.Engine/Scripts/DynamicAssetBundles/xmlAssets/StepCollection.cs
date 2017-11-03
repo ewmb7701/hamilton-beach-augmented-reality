@@ -66,13 +66,13 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
         /// <summary>
         /// The StepPtrs to Steps in this StepCollection;
         /// </summary>
-        public ListIterable<StepPtr> _StepPtrs = new ListIterable<StepPtr>(); 
+        public ListEX<StepPtr> _StepPtrs = new ListEX<StepPtr>(); 
 
         ///////////////////////////////////////////////////////////////////////////////////////////////////
         // OnEdit
         ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-        private OnEditCollectionIterable_List<StepPtr, ListIterable<StepPtr>> _onEdit_Steps;
+        private OnEditCollectionIterable_List<StepPtr, ListEX<StepPtr>> _onEdit_Steps;
 
         override public void OnEdit_Actual(IEditorAPI editorAPI)
         {
@@ -85,7 +85,7 @@ namespace AugmentEX.HamiltonBeachAR.DynamicAssetBundles
 
         public void OnLoadedFromAssetDatabase(IEditorAPI editorAPI)
         {
-            _onEdit_Steps = new OnEditCollectionIterable_List<StepPtr, ListIterable<StepPtr>>(_StepPtrs, "StepPtrs");
+            _onEdit_Steps = new OnEditCollectionIterable_List<StepPtr, ListEX<StepPtr>>(_StepPtrs, "StepPtrs");
         }
     }
 

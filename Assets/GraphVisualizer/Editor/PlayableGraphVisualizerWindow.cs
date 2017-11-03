@@ -23,10 +23,10 @@ public class PlayableGraphVisualizerWindow : EditorWindow, IHasCustomMenu
 
     #region Configuration
 
-    private static readonly float s_ToolbarHeight = 17f;
-    private static readonly float s_DefaultMaximumNormalizedNodeSize = 0.8f;
-    private static readonly float s_DefaultMaximumNodeSizeInPixels = 100.0f;
-    private static readonly float s_DefaultAspectRatio = 1.5f;
+    static private readonly float s_ToolbarHeight = 17f;
+    static private readonly float s_DefaultMaximumNormalizedNodeSize = 0.8f;
+    static private readonly float s_DefaultMaximumNodeSizeInPixels = 100.0f;
+    static private readonly float s_DefaultAspectRatio = 1.5f;
 
     #endregion
     private PlayableGraphVisualizerWindow()
@@ -39,7 +39,7 @@ public class PlayableGraphVisualizerWindow : EditorWindow, IHasCustomMenu
     }
 
     [MenuItem("Window/PlayableGraph Visualizer")]
-    public static void ShowWindow()
+    static public void ShowWindow()
     {
         GetWindow<PlayableGraphVisualizerWindow>("Playable Graph Visualizer");
     }
@@ -67,7 +67,7 @@ public class PlayableGraphVisualizerWindow : EditorWindow, IHasCustomMenu
         return selectedDirector;
     }
 
-    private static void ShowMessage(string msg)
+    static private void ShowMessage(string msg)
     {
         GUILayout.BeginVertical();
         GUILayout.FlexibleSpace();

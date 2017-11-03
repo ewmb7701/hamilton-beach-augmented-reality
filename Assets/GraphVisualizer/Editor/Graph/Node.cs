@@ -35,7 +35,7 @@ namespace GraphVisualizer
             get { return GetDepthRecursive(this); }
         }
 
-        private static int GetDepthRecursive(Node node)
+        static private int GetDepthRecursive(Node node)
         {
             if (node.parent == null) return 1;
             return 1 + GetDepthRecursive(node.parent);
