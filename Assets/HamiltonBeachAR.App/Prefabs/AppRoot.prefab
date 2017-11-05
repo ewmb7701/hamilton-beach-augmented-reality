@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 114938769920309546}
   - component: {fileID: 114073511458031054}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestructionCorner3
+  m_Name: SaveFromSceneLoadDestruction3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 114288598161858402}
   - component: {fileID: 114780938466319406}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestructionCorner0
+  m_Name: SaveFromSceneLoadDestruction0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,6 +270,8 @@ GameObject:
   - component: {fileID: 114886718414490188}
   - component: {fileID: 114244081535520030}
   - component: {fileID: 114051911344599800}
+  - component: {fileID: 114332320268786928}
+  - component: {fileID: 114620167213380988}
   m_Layer: 5
   m_Name: PSideMenu
   m_TagString: Untagged
@@ -374,7 +376,7 @@ GameObject:
   - component: {fileID: 114807842604247404}
   - component: {fileID: 114419612395952884}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestructionCorner4
+  m_Name: SaveFromSceneLoadDestruction4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -411,7 +413,7 @@ GameObject:
   - component: {fileID: 114371740924892404}
   - component: {fileID: 114580836528153036}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestructionCorner2
+  m_Name: SaveFromSceneLoadDestruction2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,7 +448,7 @@ GameObject:
   - component: {fileID: 114122824878297210}
   - component: {fileID: 114091689459867896}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestructionCorner1
+  m_Name: SaveFromSceneLoadDestruction1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -707,7 +709,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _persistentCanvases: []
-  _saveFromSeneLoadDestructionCorners: []
+  _saveFromSeneLoadDestructions:
+  - {fileID: 224627055044859616}
+  - {fileID: 224216687389267136}
+  - {fileID: 224246516163351152}
+  - {fileID: 224281456856923132}
+  - {fileID: 224714803314839376}
 --- !u!114 &114051911344599800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -720,26 +727,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _positionLerper: {fileID: 114244081535520030}
-  _position0: {x: 0, y: 0, z: 0}
-  _position1: {x: 156.5, y: 0, z: 0}
-  _interpolantCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 10
-      outSlope: 10
-      tangentMode: 34
-    - serializedVersion: 2
-      time: 0.1
-      value: 1
-      inSlope: 10
-      outSlope: 10
-      tangentMode: 34
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!114 &114053668567017610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1006,62 +993,62 @@ MonoBehaviour:
   _onHoverFirstTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onHoverTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onDeHoverTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onDeHoverLastTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onConfirmTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onCancelTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onHoverFirst:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onHover:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onDeHover:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onDeHoverLast:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onConfirm:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _onCancel:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.Unity.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
+    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
   _hoverAtStart: 0
   _hoverAtStartBefore:
@@ -1115,6 +1102,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114332320268786928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1350558471321120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3b0c3c195166ea4f9bc8dcc78f9fd5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _positionLerper: {fileID: 114244081535520030}
 --- !u!114 &114345157548361322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1286,8 +1285,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 114051911344599800}
-        m_MethodName: TogglePosition
+      - m_Target: {fileID: 114620167213380988}
+        m_MethodName: Toggle
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1408,6 +1407,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!114 &114620167213380988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1350558471321120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162f303ed8eff8f478881cb16983a656, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _peekee: {fileID: 224903133384992828}
+  _shown: {x: 0.5, y: 0}
+  _hidden: {x: 0, y: 0}
+  _interpolantCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.3
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  _positionLerper: {fileID: 114244081535520030}
+  _positionLerperSwitcher: {fileID: 114051911344599800}
 --- !u!114 &114627158050813344
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1514,7 +1547,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43cdd4f8dfeccaa4690e714f3ab1d118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _saveFromSceneLoadDestruction: {fileID: 0}
+  _saveFromSceneLoadDestruction: {fileID: 4459579157580340}
 --- !u!114 &114718860805966612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2047,7 +2080,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1347346254959692}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 250, y: -25.875, z: 0}
+  m_LocalPosition: {x: 29.5, y: -25.875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224548258644060416}
@@ -2083,7 +2116,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1076134904119722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -270, y: 17.5, z: 0}
+  m_LocalPosition: {x: -25, y: 17.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224284047319852572}
@@ -2130,10 +2163,10 @@ RectTransform:
   m_Father: {fileID: 224903133384992828}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: -0.5, y: 0}
   m_AnchorMax: {x: 0, y: 0.95}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 540, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0}
 --- !u!224 &224216687389267136
 RectTransform:
@@ -2196,7 +2229,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1072787921248034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -269.99994, y: 102.47638, z: 0}
+  m_LocalPosition: {x: -73.99994, y: 102.47638, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224926399910752188}
@@ -2277,7 +2310,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1894882378972530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -209.99997, y: -8.265564, z: 0}
+  m_LocalPosition: {x: -13.9999695, y: -8.265564, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224024538819444948}
@@ -2296,7 +2329,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1810854317833920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -260, y: 95, z: 0}
+  m_LocalPosition: {x: -15, y: 95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224063017304458052}
@@ -2314,7 +2347,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354470651879498}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 250, y: -25.875, z: 0}
+  m_LocalPosition: {x: 29.5, y: -25.875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224879145700951244}
@@ -2405,7 +2438,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1360983108003640}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -209.99997, y: 41.734436, z: 0}
+  m_LocalPosition: {x: -13.9999695, y: 41.734436, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224579937833810474}
@@ -2445,7 +2478,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1921061515982094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15, y: -25.875, z: 0}
+  m_LocalPosition: {x: -205.5, y: -25.875, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224284047319852572}
