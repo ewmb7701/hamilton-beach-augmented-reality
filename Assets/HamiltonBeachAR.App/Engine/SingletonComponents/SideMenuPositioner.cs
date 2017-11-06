@@ -21,7 +21,7 @@ namespace AugmentEX.HamiltonBeachAR.UI
         /// </summary>
         void IHandler_Event_Scene<IOnCoda>.OnEvent(ScenePID scene, LoadSceneMode mode)
         {
-            Component.LerpPos0(); // return to the 0th position
+            Component.Lerp(0, false); // return to the 0th position
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
