@@ -26,8 +26,8 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagement
         // Core Handlers
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        public override void CoreHandlersRegister(object handler) { }
+        public override void HandlersRegister(object handler) { }
 
-        public override void CoreHandlersUnregister(object handler) { }
+        public override void HandlersUnregister(object handler) { }
     }
 }

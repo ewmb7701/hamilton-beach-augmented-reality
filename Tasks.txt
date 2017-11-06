@@ -135,10 +135,11 @@ Backlog
 		A way to edit XmlAssets without going through a DAB
 			need an XmlAssetDatabase of XmlAssets which maps GUID -> XmlAssets
 			Whenever it is looked at in the inspector or loaded or whatever, adds to this Database
+			Then OnEdit edits that reference?
 		
-		Bring ScriptableObjects into DynamicAssetBundleSystem
-		convert Logo, Track, and Sfx to use new AssetPointer system
-		Make all UnityEngine.Object Asset types in FileExtension Tuple dict	
+		Convert Logo, Track, and Sfx to use new AssetPointer system
+		Finish all UnityEngine.Object Asset types in FileExtension Tuple dict
+			Bring ScriptableObjects into DynamicAssetBundleFramework via pointers 	
 		
 		Further Generification of Shared Codebase
 			DynamicEnum partial classes
@@ -168,7 +169,7 @@ Backlog
 	
 		AppRoot Script which destroys itself upon Awake if another exists in the scene
 		
-		DuoBehaviour tries to register/ unregister to all Core instances
+		MonoBehaviourEX tries to register/ unregister to all Core instances
 			Extension method for this process
 			this.CoreHandlersRegister();
 			MAKE SURE TO REMOVE ALL MANUAL CALLS!
