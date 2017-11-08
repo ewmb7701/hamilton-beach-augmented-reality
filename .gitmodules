@@ -1,6 +1,6 @@
 [submodule "Assets/SINeDUSTRIES.Unity"]
-	path = Assets/SINeDUSTRIES.Unity
+	path = Assets/SINeX.Unity
 url=https://EricDamacy@bitbucket.org/sinedustries/sinedustries-unity.git 
 [submodule "Assets/SINeDUSTRIES"]
-	path = Assets/SINeDUSTRIES
+	path = Assets/SINeX
 url=https://EricDamacy@bitbucket.org/sinedustries/sinedustries.git 
