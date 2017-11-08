@@ -4,7 +4,7 @@
   <_Description>Make sure protective cover has been removed from disc to prevent damage and scratches to bowl. Carefully place disc onto motor shaft "SLICE" side facing UP. (“SLICE” or “SHRED” is stamped on each side of the blade.)</_Description>
   <_AnimationClipPtr>
     <_AssetInfo>
-      <_GUID>5c3d031bc07555d47aa4ab0d35492fa9</_GUID>
+      <_GUID>a1a24788325840c47bafad9062fdc83d</_GUID>
       <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Animations/DiscSliceOn.anim</_AssetDatabasePath>
       <_TypeInfo>
         <_AssemblyQualifiedName>UnityEngine.AnimationClip, UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>

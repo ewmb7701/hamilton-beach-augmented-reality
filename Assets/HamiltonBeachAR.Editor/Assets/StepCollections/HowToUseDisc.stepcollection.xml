@@ -6,7 +6,7 @@
         <_GUID>fbf28255a15a46c469d4f8b1e920a6e3</_GUID>
         <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/BowlOn.step.xml</_AssetDatabasePath>
         <_TypeInfo>
-          <_AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
         </_TypeInfo>
       </_AssetInfo>
     </StepPtr>
@@ -15,7 +15,124 @@
         <_GUID>6674ba7f16f825045939947c27920585</_GUID>
         <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/DiscOnSlice.step.xml</_AssetDatabasePath>
         <_TypeInfo>
-          <_AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>13f12e416be3d5d4dbd0b05cf426f821</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/DiscSliceToShred.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>4b2c1b104119e9043b545b631b80da4d</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/LidOn.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>13acf30807f19904abd13ff27329da78</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/LidLatchOn.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>8342e89c3b7304141b629ea7ce9dcc41</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/FillChuteSmall.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>3c94ac90777a8874598ee725f75dcdc1</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/PusherSmallOn.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>d201aab5e39857f4894f1b5199551982</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/FillChuteLarge.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>3d4b430701e00954db9cab4c2289680c</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/PusherLargeOn.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>fb1a73f5f8a95e84ba739f4a6aabcb43</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/PlugOn.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>c1f47865588601c4fba5acb4b4a99374</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/ButtonOn.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>cf95e6e20441d8a4f96267a5a6949807</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/ButtonOff.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>dbbcd570e3d69154197ba9b195d31e16</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/PlugOff.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>1f5d09c4a2969814eaa03edfb7131a1a</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/LidLatchOff.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </StepPtr>
+    <StepPtr>
+      <_AssetInfo>
+        <_GUID>3fb319c3bb0aa03408205a59d0cc9e39</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/LidOff.step.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
         </_TypeInfo>
       </_AssetInfo>
     </StepPtr>
@@ -24,7 +141,7 @@
         <_GUID>deb66200c46511c448e3176989f5473a</_GUID>
         <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/DiscOffSlice.step.xml</_AssetDatabasePath>
         <_TypeInfo>
-          <_AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
         </_TypeInfo>
       </_AssetInfo>
     </StepPtr>
@@ -33,7 +150,7 @@
         <_GUID>230103bb947a9df4b82836640b9a21a1</_GUID>
         <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Steps/BowlOff.step.xml</_AssetDatabasePath>
         <_TypeInfo>
-          <_AssemblyQualifiedName>AugmentEX.HamiltonBeachAR.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssetBundles.Step, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
         </_TypeInfo>
       </_AssetInfo>
     </StepPtr>

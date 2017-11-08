@@ -1,14 +1,10 @@
 DOING
 	DEBUG TASKS
 
-	TASKS
-		Hide the SideMenu when certain things happen
-			Load Scene
-			Turning device
-					
+	TASKS					
 		Scenario DABS
 		
-		Create Stable "Demo Build" On Phone
+		***Create Stable "Demo Build" On Phone***
 		
 		PartInfo Scene
 			
@@ -100,6 +96,7 @@ DONE
 			SideMenu lerp
 				Just lerp to position in canvas space
 				Denormalize a normalized position to world space
+				Hiding when scene changes
 								
 	TEST
 		DAB Framework
@@ -121,43 +118,80 @@ DONE
 		
 Backlog	
 	TASKS		
-		DAB Build Options
-			Build Type
-				Bundle type
-			Building DABS to another device
-				
-		DABFramework -> DynamicAssetFramework
-			Dynamic Asset dictates how assets are to be layed out, editable, etc.
-			DAFramework is more of a "hard-code asset template" that dictates "how assets should be arranged"
-			DynamicAssetBundle class -> DynamicAssetRoot
-			Debug Mode which just loads from AssetDatabase
-		
-		A way to edit XmlAssets without going through a DAB
-			need an XmlAssetDatabase of XmlAssets which maps GUID -> XmlAssets
-			Whenever it is looked at in the inspector or loaded or whatever, adds to this Database
-			Then OnEdit edits that reference?
-		
-		Convert Logo, Track, and Sfx to use new AssetPointer system
-		Finish all UnityEngine.Object Asset types in FileExtension Tuple dict
-			Bring ScriptableObjects into DynamicAssetBundleFramework via pointers 	
-		
-		Further Generification of Shared Codebase
-			DynamicEnum partial classes
-			AestheticAudio TrackIDs called by SceneManager
-			
 		Create documentation and kanban for all projects
 			Kanban
 				Kanbanchi?
 			Documentation
 				Google?
-			Codebase
-			Codebase.Unity
-			HamBam
-			Clash	
+			Projects
+				Codebase
+				Codebase.Unity
+				HamBam
+				Clash
+			Get Portable Kanban tasks
+			Get ALL TODOs
+				Including evernote
 			
+	
+		DABFramework -> DynamicAssetFramework
+			Dynamic Asset dictates how assets are to be layed out, editable, etc.
+			DAFramework is more of a "hard-code asset template" that dictates "how assets should be arranged"
+			DynamicAssetBundle class -> DynamicAssetRoot
+			Debug Mode which just loads from AssetDatabase
+			
+		DAB Build Options
+			Build Type
+				Bundle type
+			Building DABS to another device
+		
+		A way to edit XmlAssets without going through a DAB
+			need an XmlAssetDatabase of XmlAssets which maps GUID -> XmlAssets
+			Load all of the known XmlAsset GUIDs at startup
+			Adds any new ones loaded to database
+			There should only be one data for the XmlAsset in the heap EVER
+				The asset in XmlAssetPointer class is a refernce to the data
+				It gets the reference from the database
+			
+		Detecting if XmlAsset needs to be saved
+			Check if new equals old...?
+			
+		DynamicAssets automatically open to proper directory with file path
+		
+		Add all UnityEngine.Object Asset types to FileExtension Tuple dict
+		ScriptableObjects pointers into DynamicAssetBundleFramework?
+			Or is it already working with just UnityObjects?
+		
+		Further Generification of Shared Codebase
+			DynamicEnum partial classes
+			AestheticAudio TrackIDs called by SceneManager
+			Remove all Clash anything
+				
 		Better Woosh Script
 			Build off PositionLerper
 			Use Rect stuff to calulate off canvas things
+			LerpInterruptBehaviour enum
+				NONE
+				FROMLAST
+					start at last position and lerp to the new one using time at 0
+				FROMTARGET
+					start at position was lerping towards using time at 0
+				FROMHERE
+					start at current position, using time at 0
+				FROMNEW
+					start at new position, time = 0
+				FROMNEW_TIMEMIRRORED
+					start from new position, using the time remaining as the start time
+					using the remaining time as time into the current interpolantCurve
+					This is very useful for going back and forth between two positions with a symmetrical curve
+						Ex:
+							[-------o>--] time remaining = 0.2
+							[------<o---] time remaining = 0.8
+							
+		PopupWrapper<T>
+			public PopupWrapper(string[] labels, T[] values)
+			public T OnEdit(IEditorAPI editorAPI);
+							
+		Convert Logo, Track, and Sfx to use new AssetPointer system
 			
 		Attempt the NamedInputPorts Wrapper Class for Playables
 			Just pass in the mixer playable that will get hooked up

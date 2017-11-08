@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Step xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_Title>Slice or Shred</_Title>
+  <_Description>The disc can be used in SLICE or SHRED mode, by flipping the disc. “SLICE” or “SHRED” is stamped on each side of the blade.</_Description>
+  <_AnimationClipPtr>
+    <_AssetInfo>
+      <_GUID>3674c6a37c0e34f409b6f58e6efb022a</_GUID>
+      <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Animations/DiscSliceToShred.anim</_AssetDatabasePath>
+      <_TypeInfo>
+        <_AssemblyQualifiedName>UnityEngine.AnimationClip, UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+      </_TypeInfo>
+    </_AssetInfo>
+  </_AnimationClipPtr>
+  <_AnimationSpeed>1</_AnimationSpeed>
+  <_AnimationStartNormalized>0</_AnimationStartNormalized>
+</Step>

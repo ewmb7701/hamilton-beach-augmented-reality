@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Step xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <_Title>Bowl Off</_Title>
-  <_Description>Remove bowl from base</_Description>
+  <_Description>Remove bowl from base.</_Description>
   <_AnimationClipPtr>
     <_AssetInfo>
       <_GUID>6374190ba1f7d6e4fbdb57cfba7fc205</_GUID>

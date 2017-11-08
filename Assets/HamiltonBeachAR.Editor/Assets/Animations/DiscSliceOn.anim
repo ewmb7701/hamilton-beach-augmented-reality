@@ -19,26 +19,26 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 290, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
         time: 0.016666668
-        value: {x: 0, y: 400, z: 0}
+        value: {x: 0, y: 490, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 1
-        value: {x: 0, y: 0, z: 0}
+        time: 1.0166667
+        value: {x: 0, y: 290, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: FP9023_BLADE_DISK___
+    path: PIVOT_DISK
   m_ScaleCurves: []
   m_FloatCurves:
   - curve:
@@ -57,7 +57,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 1
+        time: 1.0166667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -66,7 +66,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: FP9023_BLADE_DISK___/default/default_MeshPart1
+    path: PIVOT_DISK/FP9023_BLADE_DISK___/default/default_MeshPart1
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -85,7 +85,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 1
+        time: 1.0166667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -94,7 +94,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: FP9023_BLADE_DISK___/default/default_MeshPart0
+    path: PIVOT_DISK/FP9023_BLADE_DISK___/default/default_MeshPart0
     classID: 23
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -106,21 +106,21 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 4062441137
+      path: 1063016930
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1076768508
+      path: 1663064658
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 23
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 925441642
+      path: 338127556
       attribute: 3305885265
       script: {fileID: 0}
       typeID: 23
@@ -132,7 +132,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 1.0166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -152,13 +152,7 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.016666668
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 1
+        time: 0
         value: 0
         inSlope: 0
         outSlope: 0
@@ -167,7 +161,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: FP9023_BLADE_DISK___
+    path: PIVOT_DISK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -175,19 +169,19 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 2
         time: 0
-        value: 0
+        value: 290
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
         time: 0.016666668
-        value: 400
+        value: 490
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1
-        value: 0
+        time: 1.0166667
+        value: 290
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -195,20 +189,14 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: FP9023_BLADE_DISK___
+    path: PIVOT_DISK
     classID: 4
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 2
-        time: 0.016666668
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-      - serializedVersion: 2
-        time: 1
+        time: 0
         value: 0
         inSlope: 0
         outSlope: 0
@@ -217,7 +205,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: FP9023_BLADE_DISK___
+    path: PIVOT_DISK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -236,7 +224,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 1
+        time: 1.0166667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -245,7 +233,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: FP9023_BLADE_DISK___/default/default_MeshPart1
+    path: PIVOT_DISK/FP9023_BLADE_DISK___/default/default_MeshPart1
     classID: 23
     script: {fileID: 0}
   - curve:
@@ -264,7 +252,7 @@ AnimationClip:
         outSlope: Infinity
         tangentMode: 103
       - serializedVersion: 2
-        time: 1
+        time: 1.0166667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -273,7 +261,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Enabled
-    path: FP9023_BLADE_DISK___/default/default_MeshPart0
+    path: PIVOT_DISK/FP9023_BLADE_DISK___/default/default_MeshPart0
     classID: 23
     script: {fileID: 0}
   m_EulerEditorCurves: []

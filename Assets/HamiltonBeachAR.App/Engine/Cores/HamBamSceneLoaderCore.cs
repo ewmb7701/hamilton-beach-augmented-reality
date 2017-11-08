@@ -1,6 +1,7 @@
-﻿using SINe.UnityEngine.Managers;
+﻿using SINeDUSTRIES.UnityEngine.Managers;
 
 using AugmentEX.HamiltonBeachAR.SceneManagers;
+using SINeDUSTRIES.UnityEngine.SceneManagers;
 
 namespace AugmentEX.HamiltonBeachAR.SceneManagement
 {
@@ -19,7 +20,7 @@ namespace AugmentEX.HamiltonBeachAR.SceneManagement
         /// <param name="dabID">The DABID of the ScenarioDAB to load;</param>
         public void LoadScenario(string dabID)
         {
-            ScenarioSceneManager.TryLoadScenarioSceneWithScearioDABID(dabID);
+            ARScenarioSceneManager.TryLoadScenarioSceneWithScearioDABID(dabID);
         }
 
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
