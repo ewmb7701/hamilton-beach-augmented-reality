@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 4712407188156544}
   - component: {fileID: 114011392117190118}
   - component: {fileID: 114718860805966612}
+  - component: {fileID: 114375271411886648}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1003,63 +1004,63 @@ MonoBehaviour:
   _onHoverFirstTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onHoverTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onDeHoverTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onDeHoverLastTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onConfirmTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onCancelTreeUp:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onHoverFirst:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onHover:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onDeHover:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onDeHoverLast:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onConfirm:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _onCancel:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: SINe.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+    m_TypeName: SINeDUSTRIES.UnityEngine.MenuNodes.UnityEvent_MenuTree, Assembly-CSharp,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   _hoverAtStart: 0
   _hoverAtStartBefore:
     m_PersistentCalls:
@@ -1172,6 +1173,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114375271411886648
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1325505670160322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1327945023, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114378331220073872
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1256,7 +1268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1754,7 +1766,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SCENE NAME
+  m_Text: Main Menu
 --- !u!114 &114900000881618606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2166,7 +2178,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1350558471321120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50, y: -50, z: 0}
+  m_LocalPosition: {x: 490, y: -50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224559090189458330}
@@ -2176,7 +2188,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: -0.5, y: 0}
   m_AnchorMax: {x: 0, y: 0.95}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 540, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 1, y: 0}
 --- !u!224 &224216687389267136

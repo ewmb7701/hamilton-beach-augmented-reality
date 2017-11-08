@@ -1,6 +1,6 @@
 [submodule "Assets/SINeDUSTRIES.Unity"]
 	path = Assets/SINeDUSTRIES.Unity
-	url = https://OriginalSINe@bitbucket.org/OriginalSINe/sinedustries-unity.git
+url=https://EricDamacy@bitbucket.org/sinedustries/sinedustries-unity.git 
 [submodule "Assets/SINeDUSTRIES"]
 	path = Assets/SINeDUSTRIES
-	url = https://OriginalSINe@bitbucket.org/OriginalSINe/sinedustries.git
+url=https://EricDamacy@bitbucket.org/sinedustries/sinedustries.git 

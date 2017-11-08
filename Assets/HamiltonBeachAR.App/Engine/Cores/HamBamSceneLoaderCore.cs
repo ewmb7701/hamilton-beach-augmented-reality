@@ -1,9 +1,7 @@
 ﻿using SINeDUSTRIES.UnityEngine.Managers;
-
-using AugmentEX.HamiltonBeachAR.SceneManagers;
 using SINeDUSTRIES.UnityEngine.SceneManagers;
 
-namespace AugmentEX.HamiltonBeachAR.SceneManagement
+namespace RealitEX.HamiltonBeachAR.SceneManagement
 {
     /// <summary>
     /// SceneLoader for HamBam;
