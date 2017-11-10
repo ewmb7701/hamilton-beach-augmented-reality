@@ -1,14 +1,19 @@
 DOING
 	DEBUG TASKS
 
-	TASKS					
-		***Create Stable "Demo Build" On Phone***
-			Why won't any DABs load?
-			Are they being loaded?
+	TASKS							
+		PartInfo framework
+			Parts DAB
+				PartCollection
+			PartComponent
+				IOnRaycastHit
+				Update PartInfo UI singleton component
+			Tryexecuteevents when raycast hits something
+		PartInfo scene
+			
+		*** REBUILD APP TO PHONE***
 			
 		Other scenario DABs
-
-		PartInfo Scene
 			
 		More Scenario Scene Frontend	
 			currentStep / maxSteps display
@@ -170,6 +175,8 @@ Backlog
 		
 		Further Generification of Shared Codebase
 			DynamicEnum partial classes
+				HasFlag for partial enums
+				Flag handling etc.
 			AestheticAudio TrackIDs called by SceneManager
 			Remove all Clash anything
 				

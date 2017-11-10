@@ -1,0 +1,67 @@
+Animations
+	T0: 
+		Renders disabled
+		Zero position
+	T1:
+		Renders enabled
+		Off Position	
+	Tf: 
+		Renders enabled
+		Zero position
+
+Steps On Off
+	Bowl
+	Blade
+	Lid
+	LidLatch
+	DiscSlice
+	DiscShred
+	Button
+	PusherSmall
+	PusherLarge
+	Plug
+
+Steps, Food
+	FillBowl
+	FillChute
+	Pour
+
+Scenarios
+	HowToUseBlade
+		BowlOn
+		BladeOn
+		FillBowlS
+		LidOn
+		LidLatchOn
+		PusherLargeOn
+		PusherSmallOn
+		PlugOn
+		ButtonOn
+		ButtonOff
+		PlugOff
+		LidLatchOff
+		LidOff
+		BladeOff
+		BowlOff
+		Pour
+	HowToUseDisc
+		BowlOn
+		DiscOn
+		FillChute
+		LidOn
+		LidLatchOn
+		PusherLargeOn
+		PusherSmallOn
+		PlugOn
+		ButtonOn
+		ButtonOff
+		PlugOff
+		LidLatchOff
+		LidOff
+		DiscOff
+		BowlOff
+		Pour
+	CareAndCleaning
+		PlugOff
+		Wipe
+		Wash

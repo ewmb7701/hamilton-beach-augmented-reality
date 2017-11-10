@@ -227,7 +227,7 @@ PlayerSettings:
   AndroidTargetDevice: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/Users/Eric/Desktop/HamiltonBeachAR/user.keystore
+  AndroidKeystoreName: C:/Users/Eric/Keys/RealitEX.keystore
   AndroidKeyaliasName: hambamar
   AndroidTVCompatibility: 0
   AndroidIsGame: 0
