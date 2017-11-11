@@ -6,7 +6,7 @@ using System.Globalization;
 namespace UnityEngine.UI.Extensions.ColorPicker
 {
 
-[RequireComponent(typeof(InputField))]
+    [RequireComponent(typeof(InputField))]
 public class HexColorField : MonoBehaviour
 {
     public ColorPickerControl ColorPicker;
@@ -54,7 +54,7 @@ public class HexColorField : MonoBehaviour
             return string.Format("#{0:X2}{1:X2}{2:X2}", color.r, color.g, color.b);
     }
 
-    static public bool HexToColor(string hex, out Color32 color)
+    public static bool HexToColor(string hex, out Color32 color)
     {
         // Check if this is a valid hex string (# is optional)
         if (System.Text.RegularExpressions.Regex.IsMatch(hex, hexRegex))

@@ -11,7 +11,7 @@ using UnityEngine.EventSystems;
 
 namespace UnityEngine.UI.Extensions
 {
-	[AddComponentMenu("UI/Extensions/ScrollRectEx")]
+    [AddComponentMenu("UI/Extensions/ScrollRectEx")]
     public class ScrollRectEx : ScrollRect
     {
         private bool routeToParent = false;
@@ -36,7 +36,7 @@ namespace UnityEngine.UI.Extensions
         /// <summary>
         /// Always route initialize potential drag event to parents
         /// </summary>
-        override public void OnInitializePotentialDrag(PointerEventData eventData)
+        public override void OnInitializePotentialDrag(PointerEventData eventData)
         {
             DoForParents<IInitializePotentialDragHandler>((parent) => { parent.OnInitializePotentialDrag(eventData); });
             base.OnInitializePotentialDrag(eventData);
@@ -45,7 +45,7 @@ namespace UnityEngine.UI.Extensions
         /// <summary>
         /// Drag event
         /// </summary>
-        override public void OnDrag(UnityEngine.EventSystems.PointerEventData eventData)
+        public override void OnDrag(UnityEngine.EventSystems.PointerEventData eventData)
         {
             if (routeToParent)
                 DoForParents<IDragHandler>((parent) => { parent.OnDrag(eventData); });
@@ -56,7 +56,7 @@ namespace UnityEngine.UI.Extensions
         /// <summary>
         /// Begin drag event
         /// </summary>
-        override public void OnBeginDrag(UnityEngine.EventSystems.PointerEventData eventData)
+        public override void OnBeginDrag(UnityEngine.EventSystems.PointerEventData eventData)
         {
             if (!horizontal && Math.Abs(eventData.delta.x) > Math.Abs(eventData.delta.y))
                 routeToParent = true;
@@ -74,7 +74,7 @@ namespace UnityEngine.UI.Extensions
         /// <summary>
         /// End drag event
         /// </summary>
-        override public void OnEndDrag(UnityEngine.EventSystems.PointerEventData eventData)
+        public override void OnEndDrag(UnityEngine.EventSystems.PointerEventData eventData)
         {
             if (routeToParent)
                 DoForParents<IEndDragHandler>((parent) => { parent.OnEndDrag(eventData); });
@@ -83,7 +83,7 @@ namespace UnityEngine.UI.Extensions
             routeToParent = false;
         }
 
-        override public void OnScroll(PointerEventData eventData)
+        public override void OnScroll(PointerEventData eventData)
         {
             if (!horizontal && Math.Abs(eventData.scrollDelta.x) > Math.Abs(eventData.scrollDelta.y))
             {

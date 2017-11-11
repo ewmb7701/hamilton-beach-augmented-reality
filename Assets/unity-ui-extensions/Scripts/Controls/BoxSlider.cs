@@ -124,7 +124,7 @@ namespace UnityEngine.UI.Extensions
         { }
 
 #if UNITY_EDITOR
-        override protected void OnValidate()
+        protected override void OnValidate()
         {
             base.OnValidate();
 
@@ -146,7 +146,7 @@ namespace UnityEngine.UI.Extensions
 
 #endif // if UNITY_EDITOR
 
-        virtual public void Rebuild(CanvasUpdate executing)
+        public virtual void Rebuild(CanvasUpdate executing)
         {
 #if UNITY_EDITOR
             if (executing == CanvasUpdate.Prelayout)
@@ -164,7 +164,7 @@ namespace UnityEngine.UI.Extensions
 
         }
 
-        static public bool SetClass<T>(ref T currentValue, T newValue) where T : class
+        public static bool SetClass<T>(ref T currentValue, T newValue) where T : class
         {
             if ((currentValue == null && newValue == null) || (currentValue != null && currentValue.Equals(newValue)))
                 return false;
@@ -173,7 +173,7 @@ namespace UnityEngine.UI.Extensions
             return true;
         }
 
-        static public bool SetStruct<T>(ref T currentValue, T newValue) where T : struct
+        public static bool SetStruct<T>(ref T currentValue, T newValue) where T : struct
         {
             if (currentValue.Equals(newValue))
                 return false;
@@ -182,7 +182,7 @@ namespace UnityEngine.UI.Extensions
             return true;
         }
 
-        override protected void OnEnable()
+        protected override void OnEnable()
         {
             base.OnEnable();
             UpdateCachedReferences();
@@ -192,7 +192,7 @@ namespace UnityEngine.UI.Extensions
             UpdateVisuals();
         }
 
-        override protected void OnDisable()
+        protected override void OnDisable()
         {
             m_Tracker.Clear();
             base.OnDisable();
@@ -259,7 +259,7 @@ namespace UnityEngine.UI.Extensions
         }
 
 
-        override protected void OnRectTransformDimensionsChange()
+        protected override void OnRectTransformDimensionsChange()
         {
             base.OnRectTransformDimensionsChange();
             UpdateVisuals();
@@ -322,7 +322,7 @@ namespace UnityEngine.UI.Extensions
             return IsActive() && IsInteractable() && eventData.button == PointerEventData.InputButton.Left;
         }
 
-        override public void OnPointerDown(PointerEventData eventData)
+        public override void OnPointerDown(PointerEventData eventData)
         {
             if (!CanDrag(eventData))
                 return;
@@ -344,7 +344,7 @@ namespace UnityEngine.UI.Extensions
             }
         }
 
-        virtual public void OnDrag(PointerEventData eventData)
+        public virtual void OnDrag(PointerEventData eventData)
         {
             if (!CanDrag(eventData))
                 return;
@@ -352,7 +352,7 @@ namespace UnityEngine.UI.Extensions
             UpdateDrag(eventData, eventData.pressEventCamera);
         }
 
-        virtual public void OnInitializePotentialDrag(PointerEventData eventData)
+        public virtual void OnInitializePotentialDrag(PointerEventData eventData)
         {
             eventData.useDragThreshold = false;
         }

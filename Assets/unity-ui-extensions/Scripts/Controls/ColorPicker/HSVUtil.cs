@@ -7,15 +7,15 @@ namespace UnityEngine.UI.Extensions.ColorPicker
 {
     #region ColorUtilities
 
-    static public class HSVUtil
+    public static class HSVUtil
     {
-        static public HsvColor ConvertRgbToHsv(Color color)
+        public static HsvColor ConvertRgbToHsv(Color color)
         {
             return ConvertRgbToHsv((int)(color.r * 255), (int)(color.g * 255), (int)(color.b * 255));
         }
 
         //Converts an RGB color to an HSV color.
-        static public HsvColor ConvertRgbToHsv(double r, double b, double g)
+        public static HsvColor ConvertRgbToHsv(double r, double b, double g)
         {
             double delta, min;
             double h = 0, s, v;
@@ -56,7 +56,7 @@ namespace UnityEngine.UI.Extensions.ColorPicker
         }
 
         // Converts an HSV color to an RGB color.
-        static public Color ConvertHsvToRgb(double h, double s, double v, float alpha)
+        public static Color ConvertHsvToRgb(double h, double s, double v, float alpha)
         {
 
             double r = 0, g = 0, b = 0;
@@ -197,7 +197,7 @@ namespace UnityEngine.UI.Extensions.ColorPicker
             this.V = v;
         }
 
-        override public string ToString()
+        public override string ToString()
         {
             return "{" + H.ToString("f2") + "," + S.ToString("f2") + "," + V.ToString("f2") + "}";
         }

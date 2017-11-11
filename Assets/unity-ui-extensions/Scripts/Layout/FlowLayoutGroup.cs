@@ -8,10 +8,10 @@ using System.Collections.Generic;
 
 namespace UnityEngine.UI.Extensions
 {
-	/// <summary>
-	/// Layout Group controller that arranges children in rows, fitting as many on a line until total width exceeds parent bounds
-	/// </summary>
-	[AddComponentMenu("Layout/Extensions/Flow Layout Group")]
+    /// <summary>
+    /// Layout Group controller that arranges children in rows, fitting as many on a line until total width exceeds parent bounds
+    /// </summary>
+    [AddComponentMenu("Layout/Extensions/Flow Layout Group")]
 	public class FlowLayoutGroup : LayoutGroup
 	{
 		public float SpacingX = 0f;
@@ -23,7 +23,7 @@ namespace UnityEngine.UI.Extensions
 		
 		private float _layoutHeight;
 		
-		override public void CalculateLayoutInputHorizontal()
+		public override void CalculateLayoutInputHorizontal()
 		{
 			
 			base.CalculateLayoutInputHorizontal();
@@ -34,17 +34,17 @@ namespace UnityEngine.UI.Extensions
 			
 		}
 		
-		override public void SetLayoutHorizontal()
+		public override void SetLayoutHorizontal()
 		{
 			SetLayout(rectTransform.rect.width, 0, false);
 		}
 		
-		override public void SetLayoutVertical()
+		public override void SetLayoutVertical()
 		{
 			SetLayout(rectTransform.rect.width, 1, false);
 		}
 		
-		override public void CalculateLayoutInputVertical()
+		public override void CalculateLayoutInputVertical()
 		{
 			_layoutHeight = SetLayout(rectTransform.rect.width, 1, true);
 		}

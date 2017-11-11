@@ -7,7 +7,8 @@
 /// 
 /// </summary>
 
-namespace UnityEngine.UI.Extensions {
+namespace UnityEngine.UI.Extensions
+{
     /// <summary>
     /// TODO:
     /// - add automatic child sizing, like in the HorizontalOrVerticalLayoutGroup.cs
@@ -27,19 +28,19 @@ namespace UnityEngine.UI.Extensions {
         // the slope can be moved by altering this setting, it could be constrained to the 0-1 range, but other values are usefull for animations
         public float centerpoint = 0.5f;
 
-        override protected void OnEnable() { base.OnEnable(); CalculateRadial(); }
-        override public void SetLayoutHorizontal() {
+        protected override void OnEnable() { base.OnEnable(); CalculateRadial(); }
+        public override void SetLayoutHorizontal() {
         }
-        override public void SetLayoutVertical() {
+        public override void SetLayoutVertical() {
         }
-        override public void CalculateLayoutInputVertical() {
+        public override void CalculateLayoutInputVertical() {
             CalculateRadial();
         }
-        override public void CalculateLayoutInputHorizontal() {
+        public override void CalculateLayoutInputHorizontal() {
             CalculateRadial();
         }
 #if UNITY_EDITOR
-        override protected void OnValidate() {
+        protected override void OnValidate() {
             base.OnValidate();
             CalculateRadial();
         }

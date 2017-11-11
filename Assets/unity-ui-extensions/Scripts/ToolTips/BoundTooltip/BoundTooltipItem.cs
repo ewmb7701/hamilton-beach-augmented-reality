@@ -40,8 +40,8 @@ namespace UnityEngine.UI.Extensions
         }
 
         // Standard Singleton Access
-        static private BoundTooltipItem instance;
-        static public BoundTooltipItem Instance
+        private static BoundTooltipItem instance;
+        public static BoundTooltipItem Instance
         {
             get
             {

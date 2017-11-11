@@ -104,7 +104,7 @@ namespace UnityEngine.UI.Extensions
         // Temporarily stores data generated during the execution CalculateLayoutInputVertical for use in SetLayoutVertical
         private float[] preferredRowHeights;
 
-        override public void CalculateLayoutInputHorizontal()
+        public override void CalculateLayoutInputHorizontal()
         {
             base.CalculateLayoutInputHorizontal();
 
@@ -124,7 +124,7 @@ namespace UnityEngine.UI.Extensions
             SetLayoutInputForAxis(horizontalSize, horizontalSize, 0, 0);
         }
 
-        override public void CalculateLayoutInputVertical()
+        public override void CalculateLayoutInputVertical()
         {
             int columnCount = columnWidths.Length;
             int rowCount = Mathf.CeilToInt(rectChildren.Count / (float)columnCount);
@@ -186,7 +186,7 @@ namespace UnityEngine.UI.Extensions
             SetLayoutInputForAxis(totalMinHeight, totalPreferredHeight, 1, 1);
         }
 
-        override public void SetLayoutHorizontal()
+        public override void SetLayoutHorizontal()
         {
             // If no column width is defined, then assign a reasonable default
             if (columnWidths.Length == 0)
@@ -236,7 +236,7 @@ namespace UnityEngine.UI.Extensions
             }
         }
 
-        override public void SetLayoutVertical()
+        public override void SetLayoutVertical()
         {
             int columnCount = columnWidths.Length;
             int rowCount = preferredRowHeights.Length;

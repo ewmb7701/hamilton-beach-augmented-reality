@@ -22,18 +22,21 @@ namespace UnityEngine.UI.Extensions
             VerticesDistances = new float[_sides + 1];
             for (int i = 0; i < _sides; i++) VerticesDistances[i] = 1; ;
             rotation = 0;
+            SetAllDirty();
         }
         public void DrawPolygon(int _sides, float[] _VerticesDistances)
         {
             sides = _sides;
             VerticesDistances = _VerticesDistances;
             rotation = 0;
+            SetAllDirty();
         }
         public void DrawPolygon(int _sides, float[] _VerticesDistances, float _rotation)
         {
             sides = _sides;
             VerticesDistances = _VerticesDistances;
             rotation = _rotation;
+            SetAllDirty();
         }
         void Update()
         {
@@ -45,7 +48,7 @@ namespace UnityEngine.UI.Extensions
             thickness = (float)Mathf.Clamp(thickness, 0, size / 2);
         }
 
-        override protected void OnPopulateMesh(VertexHelper vh)
+        protected override void OnPopulateMesh(VertexHelper vh)
         {
             vh.Clear();
 

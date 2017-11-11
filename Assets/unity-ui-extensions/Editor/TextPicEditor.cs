@@ -15,7 +15,7 @@ namespace UnityEngine.UI.Extensions
         private SerializedProperty imageOffsetProp;
         private SerializedProperty iconList;
 
-        override protected void OnEnable()
+        protected override void OnEnable()
         {
             base.OnEnable();
             ImageScalingFactorProp = serializedObject.FindProperty("ImageScalingFactor");
@@ -24,7 +24,7 @@ namespace UnityEngine.UI.Extensions
             iconList = serializedObject.FindProperty("inspectorIconList");
         }
 
-        override public void OnInspectorGUI()
+        public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
             serializedObject.Update();

@@ -1,7 +1,6 @@
 /// Credit Ges
 /// Sourced from - http://forum.unity3d.com/threads/scripts-useful-4-6-scripts-collection.264161/page-3#post-2280109
 
-using System.Collections;
 using UnityEngine.EventSystems;
 
 namespace UnityEngine.UI.Extensions
@@ -27,13 +26,13 @@ namespace UnityEngine.UI.Extensions
 
         #region Unity Lifetime calls
 
-        override protected void OnEnable()
+        protected override void OnEnable()
         {
             base.OnEnable();
             SetDirty();
         }
 
-        override protected void OnDisable()
+        protected override void OnDisable()
         {
             m_Tracker.Clear();
             LayoutRebuilder.MarkLayoutForRebuild(rectTransform);
@@ -42,7 +41,7 @@ namespace UnityEngine.UI.Extensions
 
         #endregion
 
-        override protected void OnRectTransformDimensionsChange()
+        protected override void OnRectTransformDimensionsChange()
         {
             UpdateRect();
         }
@@ -84,8 +83,8 @@ namespace UnityEngine.UI.Extensions
             return parent.rect.size;
         }
 
-        virtual public void SetLayoutHorizontal() { }
-        virtual public void SetLayoutVertical() { }
+        public virtual void SetLayoutHorizontal() { }
+        public virtual void SetLayoutVertical() { }
 
         protected void SetDirty()
         {
@@ -96,7 +95,7 @@ namespace UnityEngine.UI.Extensions
         }
 
 #if UNITY_EDITOR
-        override protected void OnValidate()
+        protected override void OnValidate()
         {
             m_TileSize.x = Mathf.Clamp(m_TileSize.x, 0.001f, 1000f);
             m_TileSize.y = Mathf.Clamp(m_TileSize.y, 0.001f, 1000f);

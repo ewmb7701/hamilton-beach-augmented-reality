@@ -89,21 +89,21 @@ namespace UnityEngine.UI.Extensions
     /// <summary>
     /// Improved C# LZF Compressor, a very small data compression library. The compression algorithm is extremely fast.
     /// Note for strings, ensure you only use Unicode else specaial characters may get corrupted.
-    static public class CLZF2
+    public static class CLZF2
     {
-        static private readonly uint HLOG = 14;
-        static private readonly uint HSIZE = (1 << 14);
-        static private readonly uint MAX_LIT = (1 << 5);
-        static private readonly uint MAX_OFF = (1 << 13);
-        static private readonly uint MAX_REF = ((1 << 8) + (1 << 3));
+        private static readonly uint HLOG = 14;
+        private static readonly uint HSIZE = (1 << 14);
+        private static readonly uint MAX_LIT = (1 << 5);
+        private static readonly uint MAX_OFF = (1 << 13);
+        private static readonly uint MAX_REF = ((1 << 8) + (1 << 3));
 
         /// <summary>
         /// Hashtable, that can be allocated only once
         /// </summary>
-        static private readonly long[] HashTable = new long[HSIZE];
+        private static readonly long[] HashTable = new long[HSIZE];
 
         // Compresses inputBytes
-        static public byte[] Compress(byte[] inputBytes)
+        public static byte[] Compress(byte[] inputBytes)
         {
             // Starting guess, increase it later if needed
             int outputByteCountGuess = inputBytes.Length * 2;
@@ -124,7 +124,7 @@ namespace UnityEngine.UI.Extensions
         }
 
         // Decompress outputBytes
-        static public byte[] Decompress(byte[] inputBytes)
+        public static byte[] Decompress(byte[] inputBytes)
         {
             // Starting guess, increase it later if needed
             int outputByteCountGuess = inputBytes.Length * 2;
@@ -150,7 +150,7 @@ namespace UnityEngine.UI.Extensions
         /// <param name="input">Reference to the data to compress</param>
         /// <param name="output">Reference to a buffer which will contain the compressed data</param>
         /// <returns>The size of the compressed archive in the output buffer</returns>
-        static public int lzf_compress(byte[] input, ref byte[] output)
+        public static int lzf_compress(byte[] input, ref byte[] output)
         {
             int inputLength = input.Length;
             int outputLength = output.Length;
@@ -275,7 +275,7 @@ namespace UnityEngine.UI.Extensions
         /// <param name="input">Reference to the data to decompress</param>
         /// <param name="output">Reference to a buffer which will contain the decompressed data</param>
         /// <returns>Returns decompressed size</returns>
-        static public int lzf_decompress(byte[] input, ref byte[] output)
+        public static int lzf_decompress(byte[] input, ref byte[] output)
         {
             int inputLength = input.Length;
             int outputLength = output.Length;

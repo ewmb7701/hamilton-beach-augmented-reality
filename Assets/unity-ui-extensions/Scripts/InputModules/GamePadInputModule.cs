@@ -82,7 +82,7 @@ namespace UnityEngine.EventSystems
             set { m_CancelButton = value; }
         }
 
-        override public bool ShouldActivateModule()
+        public override bool ShouldActivateModule()
         {
             if (!base.ShouldActivateModule())
                 return false;
@@ -95,7 +95,7 @@ namespace UnityEngine.EventSystems
             return shouldActivate;
         }
 
-        override public void ActivateModule()
+        public override void ActivateModule()
         {
             StandaloneInputModule StandAloneSystem = GetComponent<StandaloneInputModule>();
 
@@ -114,12 +114,12 @@ namespace UnityEngine.EventSystems
             eventSystem.SetSelectedGameObject(toSelect, GetBaseEventData());
         }
 
-        override public void DeactivateModule()
+        public override void DeactivateModule()
         {
             base.DeactivateModule();
         }
 
-        override public void Process()
+        public override void Process()
         {
             bool usedEvent = SendUpdateEventToSelectedObject();
 

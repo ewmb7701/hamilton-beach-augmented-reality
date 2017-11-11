@@ -13,26 +13,26 @@ namespace UnityEngine.UI.Extensions
 
 
 #if UNITY_EDITOR
-        override protected void OnValidate()
+        protected override void OnValidate()
         {
             base.OnValidate();
             if (rectTrans == null)
                 rectTrans = GetComponent<RectTransform>();
         }
 #endif
-        override protected void Awake()
+        protected override void Awake()
         {
             base.Awake();
             rectTrans = GetComponent<RectTransform>();
             OnRectTransformDimensionsChange();
         }
-        override protected void OnEnable()
+        protected override void OnEnable()
         {
             base.OnEnable();
             rectTrans = GetComponent<RectTransform>();
             OnRectTransformDimensionsChange();
         }
-        override public void ModifyMesh(VertexHelper vh)
+        public override void ModifyMesh(VertexHelper vh)
         {
             if (! IsActive()) return;
 

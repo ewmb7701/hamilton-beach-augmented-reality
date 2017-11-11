@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace UnityEngine.UI.Extensions
 {
- 	[AddComponentMenu("UI/Extensions/Primitives/UILineTextureRenderer")]
+    [AddComponentMenu("UI/Extensions/Primitives/UILineTextureRenderer")]
     public class UILineTextureRenderer : UIPrimitiveBase
     {
         [SerializeField]
@@ -55,7 +55,7 @@ namespace UnityEngine.UI.Extensions
             }
         }
 
-        override protected void OnPopulateMesh(VertexHelper vh)
+        protected override void OnPopulateMesh(VertexHelper vh)
         {
             // requires sets of quads
             if (m_points == null || m_points.Length < 2)

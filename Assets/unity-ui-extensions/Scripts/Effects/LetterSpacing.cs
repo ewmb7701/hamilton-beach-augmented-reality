@@ -45,7 +45,7 @@ using System.Collections.Generic;
 
 namespace UnityEngine.UI.Extensions
 {
-	[AddComponentMenu("UI/Effects/Extensions/Letter Spacing")]
+    [AddComponentMenu("UI/Effects/Extensions/Letter Spacing")]
     ///Summary
     /// Note, Vertex Count has changed in 5.2.1+, is now 6 (two tris) instead of 4 (tri strip).
     public class LetterSpacing : BaseMeshEffect
@@ -56,7 +56,7 @@ namespace UnityEngine.UI.Extensions
 		protected LetterSpacing() { }
 		
 		#if UNITY_EDITOR
-		override protected void OnValidate()
+		protected override void OnValidate()
 		{
 			spacing = m_spacing;
 			base.OnValidate();
@@ -74,7 +74,7 @@ namespace UnityEngine.UI.Extensions
 			}
 		}
 
-        override public void ModifyMesh(VertexHelper vh)
+        public override void ModifyMesh(VertexHelper vh)
         {
             if (! IsActive()) return;
 

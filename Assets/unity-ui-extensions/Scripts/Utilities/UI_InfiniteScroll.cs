@@ -45,9 +45,7 @@ namespace UnityEngine.UI.Extensions
         void Awake()
         {
             if (!InitByUser)
-            {
                 Init();
-            }             
         }
 
         public void Init()
@@ -97,81 +95,36 @@ namespace UnityEngine.UI.Extensions
 
         void DisableGridComponents()
         {
-            if (_itemCount > 1) // SINe's Code: I added a check here for the items count to make sure there were enough items to actually disable things
+            if (_isVertical)
             {
-                //Debug.LogFormat("Disable grid components {0}", name);
-
-                if (_isVertical)
-                {
-                    _recordOffsetY = items[0].GetComponent<RectTransform>().anchoredPosition.y - items[1].GetComponent<RectTransform>().anchoredPosition.y;
-                    _disableMarginY = _recordOffsetY * _itemCount / 2;// _scrollRect.GetComponent<RectTransform>().rect.height/2 + items[0].sizeDelta.y;
-                }
-                if (_isHorizontal)
-                {
-                    _recordOffsetX = items[1].GetComponent<RectTransform>().anchoredPosition.x - items[0].GetComponent<RectTransform>().anchoredPosition.x;
-                    _disableMarginX = _recordOffsetX * _itemCount / 2;//_scrollRect.GetComponent<RectTransform>().rect.width/2 + items[0].sizeDelta.x;
-                }
-
-                if (_verticalLayoutGroup)
-                {
-                    _verticalLayoutGroup.enabled = false;
-                }
-                if (_horizontalLayoutGroup)
-                {
-                    _horizontalLayoutGroup.enabled = false;
-                }
-                if (_contentSizeFitter)
-                {
-                    _contentSizeFitter.enabled = false;
-                }
-                if (_gridLayoutGroup)
-                {
-                    _gridLayoutGroup.enabled = false;
-                }
-
-                _hasDisabledGridComponents = true;
+                _recordOffsetY = items[0].GetComponent<RectTransform>().anchoredPosition.y - items[1].GetComponent<RectTransform>().anchoredPosition.y;
+                _disableMarginY = _recordOffsetY * _itemCount / 2;// _scrollRect.GetComponent<RectTransform>().rect.height/2 + items[0].sizeDelta.y;
             }
-            //else
-            //{
-            //    Debug.LogWarningFormat("WARN: Not enough items to calculate the offsets etc. Sad!");
-            //}
-        }
-
-        /// <summary>
-        /// Reset this script;
-        /// Allows for multiple inits to be called in a single lifetime;
-        /// SINe's code; 
-        /// </summary>
-        public void DeInit()
-        {
-            items.Clear(); // clear out all the items
-            _itemCount = 0; // set the item count to 0
-
-            if (_hasDisabledGridComponents) // if disabled them
+            if (_isHorizontal)
             {
-                if (_verticalLayoutGroup)
-                {
-                    _verticalLayoutGroup.enabled = true;
-                }
-                if (_horizontalLayoutGroup)
-                {
-                    _horizontalLayoutGroup.enabled = true;
-                }
-                if (_contentSizeFitter)
-                {
-                    _contentSizeFitter.enabled = true;
-                }
-                if (_gridLayoutGroup)
-                {
-                    _gridLayoutGroup.enabled = true;
-                }
+                _recordOffsetX = items[1].GetComponent<RectTransform>().anchoredPosition.x - items[0].GetComponent<RectTransform>().anchoredPosition.x;
+                _disableMarginX = _recordOffsetX * _itemCount / 2;//_scrollRect.GetComponent<RectTransform>().rect.width/2 + items[0].sizeDelta.x;
             }
 
-            //Debug.LogFormat("deinit");
-
-            _hasDisabledGridComponents = false; // reset the flag
+            if (_verticalLayoutGroup)
+            {
+                _verticalLayoutGroup.enabled = false;
+            }
+            if (_horizontalLayoutGroup)
+            {
+                _horizontalLayoutGroup.enabled = false;
+            }
+            if (_contentSizeFitter)
+            {
+                _contentSizeFitter.enabled = false;
+            }
+            if (_gridLayoutGroup)
+            {
+                _gridLayoutGroup.enabled = false;
+            }
+            _hasDisabledGridComponents = true;
         }
-
+        
         public void OnScroll(Vector2 pos)
         {
             if (!_hasDisabledGridComponents)
@@ -199,8 +152,6 @@ namespace UnityEngine.UI.Extensions
 
                 if (_isVertical)
                 {
-                    //Debug.LogFormat("neww");
-
                     if (_scrollRect.transform.InverseTransformPoint(items[i].gameObject.transform.position).y > _disableMarginY + _treshold)
                     {
                         _newAnchoredPosition = items[i].anchoredPosition;

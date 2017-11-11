@@ -84,7 +84,7 @@ namespace UnityEngine.UI
         { }
 
 #if UNITY_EDITOR
-        override protected void OnValidate()
+        protected override void OnValidate()
         {
             base.OnValidate();
             Set(m_IsOn, false);
@@ -97,7 +97,7 @@ namespace UnityEngine.UI
 
 #endif // if UNITY_EDITOR
 
-        virtual public void Rebuild(CanvasUpdate executing)
+        public virtual void Rebuild(CanvasUpdate executing)
         {
 #if UNITY_EDITOR
             if (executing == CanvasUpdate.Prelayout)
@@ -108,26 +108,26 @@ namespace UnityEngine.UI
 #endif
         }
 
-        virtual public void LayoutComplete()
+        public virtual void LayoutComplete()
         { }
 
-        virtual public void GraphicUpdateComplete()
+        public virtual void GraphicUpdateComplete()
         { }
 
-        override protected void OnEnable()
+        protected override void OnEnable()
         {
             base.OnEnable();
             SetToggleGroup(m_Group, false);
             PlayEffect(true);
         }
 
-        override protected void OnDisable()
+        protected override void OnDisable()
         {
             SetToggleGroup(null, false);
             base.OnDisable();
         }
 
-        override protected void OnDidApplyAnimationProperties()
+        protected override void OnDidApplyAnimationProperties()
         {
             // Check if isOn has been changed by the animation.
             // Unfortunately there is no way to check if we don't have a graphic.
@@ -232,7 +232,7 @@ namespace UnityEngine.UI
         /// <summary>
         /// Assume the correct visual state.
         /// </summary>
-        override protected void Start()
+        protected override void Start()
         {
             PlayEffect(true);
         }
@@ -248,7 +248,7 @@ namespace UnityEngine.UI
         /// <summary>
         /// React to clicks.
         /// </summary>
-        virtual public void OnPointerClick(PointerEventData eventData)
+        public virtual void OnPointerClick(PointerEventData eventData)
         {
             if (eventData.button != PointerEventData.InputButton.Left)
                 return;
@@ -256,7 +256,7 @@ namespace UnityEngine.UI
             InternalToggle();
         }
 
-        virtual public void OnSubmit(BaseEventData eventData)
+        public virtual void OnSubmit(BaseEventData eventData)
         {
             InternalToggle();
         }

@@ -4,13 +4,13 @@
 
 namespace UnityEngine.UI.Extensions
 {
-    static public class RectTransformExtension
+    public static class RectTransformExtension
     {
         /// <summary>
         /// Converts the anchoredPosition of the first RectTransform to the second RectTransform,
         /// taking into consideration offset, anchors and pivot, and returns the new anchoredPosition
         /// </summary>
-        static public Vector2 switchToRectTransform(this RectTransform from, RectTransform to)
+        public static Vector2 switchToRectTransform(this RectTransform from, RectTransform to)
         {
             Vector2 localPoint;
             Vector2 fromPivotDerivedOffset = new Vector2(from.rect.width * from.pivot.x + from.rect.xMin, from.rect.height * from.pivot.y + from.rect.yMin);

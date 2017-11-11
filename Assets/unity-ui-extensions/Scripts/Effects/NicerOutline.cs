@@ -4,8 +4,8 @@
 using System.Collections.Generic;
 namespace UnityEngine.UI.Extensions
 {
-	//An outline that looks a bit nicer than the default one. It has less "holes" in the outline by drawing more copies of the effect
-	[AddComponentMenu("UI/Effects/Extensions/Nicer Outline")]
+    //An outline that looks a bit nicer than the default one. It has less "holes" in the outline by drawing more copies of the effect
+    [AddComponentMenu("UI/Effects/Extensions/Nicer Outline")]
 	public class NicerOutline : BaseMeshEffect
 	{
 		[SerializeField]
@@ -122,7 +122,7 @@ namespace UnityEngine.UI.Extensions
         }
 
 
-        override public void ModifyMesh(VertexHelper vh)
+        public override void ModifyMesh(VertexHelper vh)
         {
             if (!this.IsActive ())
 			{
@@ -176,7 +176,7 @@ namespace UnityEngine.UI.Extensions
         }
 
 #if UNITY_EDITOR
-		override protected void OnValidate ()
+		protected override void OnValidate ()
 		{
 			this.effectDistance = this.m_EffectDistance;
 			base.OnValidate ();

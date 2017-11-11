@@ -8,21 +8,21 @@ namespace UnityEngine.UI.Extensions
     [AddComponentMenu("Event/VR Input Module")]
     public class VRInputModule : BaseInputModule
     {
-        static public GameObject targetObject;
+        public static GameObject targetObject;
 
         static VRInputModule _singleton;
 
         private int counter;
 
-        static private bool mouseClicked;
-        static public Vector3 cursorPosition;
+        private static bool mouseClicked;
+        public static Vector3 cursorPosition;
 
-        override protected void Awake()
+        protected override void Awake()
         {
             _singleton = this;
         }
 
-        override public void Process()
+        public override void Process()
         {
             if (targetObject == null)
             {
@@ -31,7 +31,7 @@ namespace UnityEngine.UI.Extensions
             }
         }
 
-        static public void PointerSubmit(GameObject obj)
+        public static void PointerSubmit(GameObject obj)
         {
             targetObject = obj;
             mouseClicked = true;
@@ -46,7 +46,7 @@ namespace UnityEngine.UI.Extensions
             }
         }
 
-        static public void PointerExit(GameObject obj)
+        public static void PointerExit(GameObject obj)
         {
             print("PointerExit " + obj.name);
             PointerEventData pEvent = new PointerEventData(_singleton.eventSystem);
@@ -54,7 +54,7 @@ namespace UnityEngine.UI.Extensions
             ExecuteEvents.Execute(obj, pEvent, ExecuteEvents.deselectHandler); //This fixes the problem
         }
 
-        static public void PointerEnter(GameObject obj)
+        public static void PointerEnter(GameObject obj)
         {
             print("PointerEnter " + obj.name);
             PointerEventData pEvent = new PointerEventData(_singleton.eventSystem);

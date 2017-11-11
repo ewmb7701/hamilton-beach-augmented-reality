@@ -4,7 +4,7 @@
 using UnityEditor;
 namespace UnityEngine.UI.Extensions
 {
-    static public class uGUITools
+    public static class uGUITools
     {
         [MenuItem("uGUI/Anchors to Corners %[")]
         static void AnchorsToCorners()

@@ -9,7 +9,7 @@ namespace UnityEngine.UI.Extensions
     [CanEditMultipleObjects, CustomEditor(typeof(NonDrawingGraphic), false)]
     public class NonDrawingGraphicEditor : GraphicEditor
     {
-        override public void OnInspectorGUI()
+        public override void OnInspectorGUI()
         {
             base.serializedObject.Update();
             EditorGUILayout.PropertyField(base.m_Script, new GUILayoutOption[0]);

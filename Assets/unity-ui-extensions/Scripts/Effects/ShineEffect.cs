@@ -38,7 +38,7 @@ namespace UnityEngine.UI.Extensions
             }
         }
 
-        override protected void OnPopulateMesh(VertexHelper vh)
+        protected override void OnPopulateMesh(VertexHelper vh)
         {
             var r = GetPixelAdjustedRect();
             var v = new Vector4(r.x, r.y, r.x + r.width, r.y + r.height);
@@ -85,7 +85,7 @@ namespace UnityEngine.UI.Extensions
         }
 
 #if UNITY_EDITOR
-        override public void OnRebuildRequested()
+        public override void OnRebuildRequested()
         {
             base.OnRebuildRequested();
         }

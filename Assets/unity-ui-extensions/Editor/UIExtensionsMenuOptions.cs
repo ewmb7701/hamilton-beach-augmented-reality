@@ -5,11 +5,11 @@ using UnityEngine.UI.Extensions;
 
 namespace UnityEditor.UI
 {
-	/// <summary>
-	/// This script adds the Extensions UI menu options to the Unity Editor.
-	/// </summary>
+    /// <summary>
+    /// This script adds the Extensions UI menu options to the Unity Editor.
+    /// </summary>
 
-	static internal class ExtensionMenuOptions
+    static internal class ExtensionMenuOptions
 	{
 		#region Unity Builder section  - Do not change unless UI Source (Editor\MenuOptions) changes
 		#region Unity Builder properties  - Do not change unless UI Source (Editor\MenuOptions) changes
@@ -23,14 +23,14 @@ namespace UnityEditor.UI
 		private const string kKnobPath = "UI/Skin/Knob.psd";
 		private const string kCheckmarkPath = "UI/Skin/Checkmark.psd";
 
-		static private Vector2 s_ThickGUIElementSize = new Vector2(kWidth, kThickHeight);
-		static private Vector2 s_ThinGUIElementSize = new Vector2(kWidth, kThinHeight);
-		static private Vector2 s_ImageGUIElementSize = new Vector2(100f, 100f);
-		static private Color s_DefaultSelectableColor = new Color(1f, 1f, 1f, 1f);
-		static private Color s_TextColor = new Color(50f / 255f, 50f / 255f, 50f / 255f, 1f);
+		private static Vector2 s_ThickGUIElementSize = new Vector2(kWidth, kThickHeight);
+		private static Vector2 s_ThinGUIElementSize = new Vector2(kWidth, kThinHeight);
+		private static Vector2 s_ImageGUIElementSize = new Vector2(100f, 100f);
+		private static Color s_DefaultSelectableColor = new Color(1f, 1f, 1f, 1f);
+		private static Color s_TextColor = new Color(50f / 255f, 50f / 255f, 50f / 255f, 1f);
 		#endregion
 		#region Unity Builder methods - Do not change unless UI Source (Editor\MenuOptions) changes
-		static private void SetPositionVisibleinSceneView(RectTransform canvasRTransform, RectTransform itemTransform)
+		private static void SetPositionVisibleinSceneView(RectTransform canvasRTransform, RectTransform itemTransform)
 		{
 			// Find the best scene view
 			SceneView sceneView = SceneView.lastActiveSceneView;
@@ -75,7 +75,7 @@ namespace UnityEditor.UI
 			itemTransform.localScale = Vector3.one;
 		}
 
-		static private GameObject CreateUIElementRoot(string name, MenuCommand menuCommand, Vector2 size)
+		private static GameObject CreateUIElementRoot(string name, MenuCommand menuCommand, Vector2 size)
 		{
 			GameObject parent = menuCommand.context as GameObject;
 			if (parent == null || parent.GetComponentInParent<Canvas>() == null)
@@ -137,18 +137,18 @@ namespace UnityEditor.UI
 			return root;
 		}
 
-		static public void CreateEventSystem(MenuCommand menuCommand)
+		public static void CreateEventSystem(MenuCommand menuCommand)
 		{
 			GameObject parent = menuCommand.context as GameObject;
 			CreateEventSystem(true, parent);
 		}
 
-		static private void CreateEventSystem(bool select)
+		private static void CreateEventSystem(bool select)
 		{
 			CreateEventSystem(select, null);
 		}
 
-		static private void CreateEventSystem(bool select, GameObject parent)
+		private static void CreateEventSystem(bool select, GameObject parent)
 		{
 			var esys = Object.FindObjectOfType<EventSystem>();
 			if (esys == null)
@@ -186,7 +186,7 @@ namespace UnityEditor.UI
 			return ExtensionMenuOptions.CreateNewUI();
 		}
 
-		static private void SetDefaultColorTransitionValues(Selectable slider)
+		private static void SetDefaultColorTransitionValues(Selectable slider)
 		{
 			ColorBlock colors = slider.colors;
 			colors.highlightedColor = new Color(0.882f, 0.882f, 0.882f);
@@ -194,7 +194,7 @@ namespace UnityEditor.UI
 			colors.disabledColor = new Color(0.521f, 0.521f, 0.521f);
 		}
 
-		static private void SetDefaultTextValues(Text lbl)
+		private static void SetDefaultTextValues(Text lbl)
 		{
 			// Set text values we want across UI elements in default controls.
 			// Don't set values which are the same as the default values for the Text component,
@@ -379,7 +379,7 @@ namespace UnityEditor.UI
 
 			ScrollSnap scrollSnap = scrollSnapRoot.AddComponent<ScrollSnap>();
 			scrollSnap.direction = direction;
-			scrollSnap.itemsVisibleAtOnce = itemVisible;
+			scrollSnap.ItemsVisibleAtOnce = itemVisible;
 
 			//Setup Content container
 			RectTransform rectTransformContent = itemList.GetComponent<RectTransform>();
@@ -549,9 +549,10 @@ namespace UnityEditor.UI
 
 			Selection.activeGameObject = uiVerticalScrollerRoot;
 		}
-		#endregion
+        #endregion
 
-		[MenuItem("GameObject/UI/Extensions/UI Button", false)]
+        #region UI Button
+        [MenuItem("GameObject/UI/Extensions/UI Button", false)]
 		static public void AddUIButton(MenuCommand menuCommand)
 		{
 			GameObject uiButtonRoot = CreateUIElementRoot("UI Button", menuCommand, s_ThickGUIElementSize);
@@ -578,8 +579,10 @@ namespace UnityEditor.UI
 
 			Selection.activeGameObject = uiButtonRoot;
 		}
+        #endregion
 
-		[MenuItem("GameObject/UI/Extensions/UI Flippable", false)]
+        #region UI Flippable
+        [MenuItem("GameObject/UI/Extensions/UI Flippable", false)]
 		static public void AddUIFlippableImage(MenuCommand menuCommand)
 		{
 			GameObject go = CreateUIElementRoot("UI Flippable", menuCommand, s_ImageGUIElementSize);
@@ -587,8 +590,10 @@ namespace UnityEditor.UI
 			go.AddComponent<UIFlippable>();
 			Selection.activeGameObject = go;
 		}
+        #endregion
 
-		[MenuItem("GameObject/UI/Extensions/UI Window Base", false)]
+        #region UI WindowBase
+        [MenuItem("GameObject/UI/Extensions/UI Window Base", false)]
 		static public void AddUIWindowBase(MenuCommand menuCommand)
 		{
 			GameObject go = CreateUIElementRoot("UI Window Base", menuCommand, s_ThickGUIElementSize);
@@ -596,9 +601,10 @@ namespace UnityEditor.UI
 			go.AddComponent<Image>();
 			Selection.activeGameObject = go;
 		}
+        #endregion
 
-		#region Accordian
-		[MenuItem("GameObject/UI/Extensions/Accordion/Accordion Group", false)]
+        #region Accordian
+        [MenuItem("GameObject/UI/Extensions/Accordion/Accordion Group", false)]
 		static public void AddAccordionGroup(MenuCommand menuCommand)
 		{
 			GameObject go = CreateUIElementRoot("Accordion Group", menuCommand, s_ThickGUIElementSize);
@@ -995,12 +1001,12 @@ namespace UnityEditor.UI
 			Selection.activeGameObject = go;
 		}
 
-		static private void CreateToolTipItem(bool select)
+		private static void CreateToolTipItem(bool select)
 		{
 			CreateToolTipItem(select, null);
 		}
 
-		static private void CreateToolTipItem(bool select, GameObject parent)
+		private static void CreateToolTipItem(bool select, GameObject parent)
 		{
 			var btti = Object.FindObjectOfType<BoundTooltipItem>();
 			if (btti == null)
@@ -1126,11 +1132,20 @@ namespace UnityEditor.UI
 			go.AddComponent<UIPolygon>();
 			Selection.activeGameObject = go;
 		}
-		#endregion
 
-		#region Re-Orderable Lists
+        [MenuItem("GameObject/UI/Extensions/Primitives/UI Grid Renderer", false)]
+        static public void AddUIGridRenderer(MenuCommand menuCommand)
+        {
+            GameObject go = CreateUIElementRoot("UI GridRenderer", menuCommand, s_ImageGUIElementSize);
+            go.AddComponent<UIGridRenderer>();
+            Selection.activeGameObject = go;
+        }
 
-		[MenuItem("GameObject/UI/Extensions/Re-orderable Lists/Re-orderable Vertical Scroll Rect", false)]
+        #endregion
+
+        #region Re-Orderable Lists
+
+        [MenuItem("GameObject/UI/Extensions/Re-orderable Lists/Re-orderable Vertical Scroll Rect", false)]
 		static public void AddReorderableScrollRectVertical(MenuCommand menuCommand)
 		{
 			GameObject reorderableScrollRoot = CreateUIElementRoot("Re-orderable Vertical ScrollRect", menuCommand, s_ThickGUIElementSize);
@@ -1393,7 +1408,7 @@ namespace UnityEditor.UI
 		[MenuItem("GameObject/UI/Extensions/Re-orderable Lists/Re-orderable Vertical List", false)]
 		static public void AddReorderableVerticalList(MenuCommand menuCommand)
 		{
-			GameObject reorderableScrollRoot = CreateUIElementRoot("Re-orderable Vertial List", menuCommand, s_ThickGUIElementSize);
+			GameObject reorderableScrollRoot = CreateUIElementRoot("Re-orderable Vertical List", menuCommand, s_ThickGUIElementSize);
 
 			GameObject childContent = CreateUIObject("List_Content", reorderableScrollRoot);
 
@@ -1635,9 +1650,59 @@ namespace UnityEditor.UI
 		}
 
 
-		#endregion
+        #endregion
 
-		[MenuItem("GameObject/UI/Extensions/UI Knob", false)]
+        #region Segmented Control
+        [MenuItem("GameObject/UI/Extensions/Segmented Control", false)]
+        static public void AddSegmentedControl(MenuCommand menuCommand)
+        {
+            GameObject go = CreateUIElementRoot("Segmented Control", menuCommand, s_ThinGUIElementSize);
+            SegmentedControl control = go.AddComponent<SegmentedControl>();
+
+            Color selectedColor = new Color(0f, 0.455f, 0.894f);
+            control.selectedColor = selectedColor;
+
+            var labels = new string[] { "This", "That", "Other" };
+            for (int i = 0; i < 3; i++)
+			{
+                var button = AddButtonAsChild(go);
+                button.name = "Segment " + (i + 1);
+                var text = button.GetComponentInChildren<Text>();
+                text.text = labels[i];
+                text.color = selectedColor;
+            }
+
+            control.LayoutSegments();
+
+            Selection.activeGameObject = go;
+        }
+        #endregion
+		
+        #region Stepper
+        [MenuItem("GameObject/UI/Extensions/Stepper", false)]
+        static public void AddStepper(MenuCommand menuCommand)
+        {
+            GameObject go = CreateUIElementRoot("Stepper", menuCommand, new Vector2(42, kThinHeight));
+            Stepper control = go.AddComponent<Stepper>();
+
+            var labels = new string[] { "−", "+" };
+            for (int i = 0; i < 2; i++)
+            {
+                var button = AddButtonAsChild(go);
+				button.gameObject.AddComponent<StepperSide>();
+                button.name = i == 0 ? "Minus" : "Plus";
+                var text = button.GetComponentInChildren<Text>();
+                text.text = labels[i];
+            }
+
+            control.LayoutSides();
+
+            Selection.activeGameObject = go;
+        }
+        #endregion
+
+        #region UI Knob
+        [MenuItem("GameObject/UI/Extensions/UI Knob", false)]
 		static public void AddUIKnob(MenuCommand menuCommand)
 		{
 			GameObject go = CreateUIElementRoot("UI Knob", menuCommand, s_ImageGUIElementSize);
@@ -1645,14 +1710,17 @@ namespace UnityEditor.UI
 			go.AddComponent<UI_Knob>();
 			Selection.activeGameObject = go;
 		}
-		
-		[MenuItem("GameObject/UI/Extensions/TextPic", false)]
+        #endregion
+
+        #region TextPic
+        [MenuItem("GameObject/UI/Extensions/TextPic", false)]
 		static public void AddTextPic(MenuCommand menuCommand)
 		{
 			GameObject go = CreateUIElementRoot("TextPic", menuCommand, s_ImageGUIElementSize);
 			go.AddComponent<TextPic>();
 			Selection.activeGameObject = go;
 		}
+        #endregion
 
         #region BoxSlider
         [MenuItem("GameObject/UI/Extensions/Box Slider", false)]
@@ -1690,10 +1758,79 @@ namespace UnityEditor.UI
         }
         #endregion
 
+        #region Non Drawing  Graphic options
+        [MenuItem("GameObject/UI/Extensions/NonDrawingGraphic", false)]
+        static public void AddNonDrawingGraphic(MenuCommand menuCommand)
+        {
+            GameObject go = CreateUIElementRoot("NonDrawing Graphic", menuCommand, s_ImageGUIElementSize);
+            go.AddComponent<NonDrawingGraphic>();
+            Selection.activeGameObject = go;
+        }
+
+        [MenuItem("GameObject/UI/Extensions/NonDrawingGraphicClickable", false)]
+        static public void AddClickableNonDrawingGraphic(MenuCommand menuCommand)
+        {
+            GameObject go = CreateUIElementRoot("NonDrawing Graphic-Clickable", menuCommand, s_ImageGUIElementSize);
+            go.AddComponent<NonDrawingGraphic>();
+            go.AddComponent<UISelectableExtension>();
+            Selection.activeGameObject = go;
+        }
+        #endregion
+
+        #region Radial Slider
+        [MenuItem("GameObject/UI/Extensions/RadialSlider", false)]
+        static public void AddRadialSlider(MenuCommand menuCommand)
+        {
+            GameObject sliderRoot = CreateUIElementRoot("Radial Slider", menuCommand, s_ThickGUIElementSize);
+            GameObject SliderControl = CreateUIObject("Slider", sliderRoot);
+
+            Image image = sliderRoot.AddComponent<Image>();
+            image.sprite = AssetDatabase.GetBuiltinExtraResource<Sprite>(kStandardSpritePath);
+            image.type = Image.Type.Simple;
+            image.color = s_DefaultSelectableColor;
+
+            RectTransform sliderRootRectTransform = sliderRoot.GetComponent<RectTransform>();
+            sliderRootRectTransform.anchorMin = new Vector2(0.5f, 0.5f);
+            sliderRootRectTransform.anchorMax = new Vector2(0.5f, 0.5f);
+            sliderRootRectTransform.anchoredPosition = Vector2.zero;
+            sliderRootRectTransform.sizeDelta = new Vector2(250f, 250f);
+
+            Image slidrImage = SliderControl.AddComponent<Image>();
+            slidrImage.sprite = AssetDatabase.GetBuiltinExtraResource<Sprite>(kStandardSpritePath);
+            slidrImage.type = Image.Type.Filled;
+            slidrImage.fillMethod = Image.FillMethod.Radial360;
+            slidrImage.fillOrigin = 3;
+            slidrImage.color = Color.red;
+            slidrImage.fillAmount = 0;
+            RadialSlider slider = SliderControl.AddComponent<RadialSlider>();
+            slider.StartColor = Color.green;
+            slider.EndColor = Color.red;
+
+            RectTransform sliderRectTransform = SliderControl.GetComponent<RectTransform>();
+            sliderRectTransform.anchorMin = Vector2.zero;
+            sliderRectTransform.anchorMax = Vector2.one;
+            sliderRectTransform.sizeDelta = Vector2.zero;
+
+            Selection.activeGameObject = sliderRoot;
+        }
+        #endregion
+
+        #region Menu Manager GO
+        [MenuItem("GameObject/UI/Extensions/Menu Manager", false)]
+        static public void AddMenuManager(MenuCommand menuCommand)
+        {
+            GameObject child = new GameObject("MenuManager");
+            Undo.RegisterCreatedObjectUndo(child, "Create " + "MenuManager");
+            child.AddComponent<MenuManager>();
+            Selection.activeGameObject = child;
+        }
+        #endregion
+
+
         #endregion
 
         #region Helper Functions
-        static private GameObject AddInputFieldAsChild(GameObject parent)
+        private static GameObject AddInputFieldAsChild(GameObject parent)
 		{
 			GameObject root = CreateUIObject("InputField", parent);
 
@@ -1741,7 +1878,7 @@ namespace UnityEditor.UI
 			return root;
 		}
 
-		static private GameObject AddScrollbarAsChild(GameObject parent)
+		private static GameObject AddScrollbarAsChild(GameObject parent)
 		{
 			// Create GOs Hierarchy
 			GameObject scrollbarRoot = CreateUIObject("Scrollbar", parent);
@@ -1775,7 +1912,7 @@ namespace UnityEditor.UI
 			return scrollbarRoot;
 		}
 
-		static private GameObject AddTextAsChild(GameObject parent)
+		private static GameObject AddTextAsChild(GameObject parent)
 		{
 			GameObject go = CreateUIObject("Text", parent);
 
@@ -1786,7 +1923,7 @@ namespace UnityEditor.UI
 			return go;
 		}
 
-		static private GameObject AddImageAsChild(GameObject parent)
+		private static GameObject AddImageAsChild(GameObject parent)
 		{
 			GameObject go = CreateUIObject("Image", parent);
 
@@ -1795,7 +1932,7 @@ namespace UnityEditor.UI
 			return go;
 		}
 
-		static private GameObject AddButtonAsChild(GameObject parent)
+		private static GameObject AddButtonAsChild(GameObject parent)
 		{
 			GameObject buttonRoot = CreateUIObject("Button", parent);
 
@@ -1823,7 +1960,7 @@ namespace UnityEditor.UI
 			return buttonRoot;
 		}
 
-        static private RectTransform SetAnchorsAndStretch(GameObject root)
+        private static RectTransform SetAnchorsAndStretch(GameObject root)
         {
             RectTransform rectTransformRoot = root.GetComponent<RectTransform>();
             rectTransformRoot.anchorMin = new Vector2(0.5f, 0.5f);

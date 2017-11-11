@@ -19,7 +19,7 @@ namespace UnityEngine.UI.Extensions
 		SerializedProperty m_ValueY;
 		SerializedProperty m_OnValueChanged;
 		
-		override protected void OnEnable()
+		protected override void OnEnable()
 		{
 			base.OnEnable();
 			m_HandleRect = serializedObject.FindProperty("m_HandleRect");
@@ -32,7 +32,7 @@ namespace UnityEngine.UI.Extensions
 			m_OnValueChanged = serializedObject.FindProperty("m_OnValueChanged");
 		}
 		
-		override public void OnInspectorGUI()
+		public override void OnInspectorGUI()
 		{
 			base.OnInspectorGUI();
 			EditorGUILayout.Space();

@@ -19,7 +19,7 @@ namespace UnityEngine.UI.Extensions
     {
         RectTransform m_transform = null;
         private bool _isDragging = false;
-        static public bool ResetCoords = false;
+        public static bool ResetCoords = false;
         private Vector3 m_originalCoods = Vector3.zero;
         private Canvas m_canvas;
         private RectTransform m_canvasRectTransform;

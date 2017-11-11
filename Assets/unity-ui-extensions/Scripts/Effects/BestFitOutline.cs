@@ -17,7 +17,7 @@ namespace UnityEngine.UI.Extensions
 		//
 		// Methods
 		//
-		override public void ModifyMesh (Mesh mesh)
+		public override void ModifyMesh (Mesh mesh)
 		{
 			if (!this.IsActive ())
 			{

@@ -3,13 +3,13 @@
 
 namespace UnityEngine.UI.Extensions
 {
-    static public class ScrollRectExtensions
+    public static class ScrollRectExtensions
     {
-        static public void ScrollToTop(this ScrollRect scrollRect)
+        public static void ScrollToTop(this ScrollRect scrollRect)
         {
             scrollRect.normalizedPosition = new Vector2(0, 1);
         }
-        static public void ScrollToBottom(this ScrollRect scrollRect)
+        public static void ScrollToBottom(this ScrollRect scrollRect)
         {
             scrollRect.normalizedPosition = new Vector2(0, 0);
         }

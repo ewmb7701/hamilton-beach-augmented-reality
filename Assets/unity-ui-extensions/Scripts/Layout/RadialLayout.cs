@@ -31,23 +31,23 @@ namespace UnityEngine.UI.Extensions
         public float fDistance;
         [Range(0f, 360f)]
         public float MinAngle, MaxAngle, StartAngle;
-        override protected void OnEnable() { base.OnEnable(); CalculateRadial(); }
-        override public void SetLayoutHorizontal()
+        protected override void OnEnable() { base.OnEnable(); CalculateRadial(); }
+        public override void SetLayoutHorizontal()
         {
         }
-        override public void SetLayoutVertical()
+        public override void SetLayoutVertical()
         {
         }
-        override public void CalculateLayoutInputVertical()
+        public override void CalculateLayoutInputVertical()
         {
             CalculateRadial();
         }
-        override public void CalculateLayoutInputHorizontal()
+        public override void CalculateLayoutInputHorizontal()
         {
             CalculateRadial();
         }
 #if UNITY_EDITOR
-        override protected void OnValidate()
+        protected override void OnValidate()
         {
             base.OnValidate();
             CalculateRadial();
@@ -66,7 +66,7 @@ namespace UnityEngine.UI.Extensions
                 RectTransform child = (RectTransform)transform.GetChild(i);
                 if (child != null)
                 {
-                    //Adding the elements to the tracker stops the user from modifiying their positions via the editorAPI.
+                    //Adding the elements to the tracker stops the user from modifiying their positions via the editor.
                     m_Tracker.Add(this, child,
                     DrivenTransformProperties.Anchors |
                     DrivenTransformProperties.AnchoredPosition |

@@ -5,8 +5,8 @@
 Simply place the script on the ScrollRect that contains the selectable children we'll be scroling to
 and drag'n'drop the RectTransform of the options "container" that we'll be scrolling.*/
 
-using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 
 namespace UnityEngine.UI.Extensions
 {
@@ -76,18 +76,18 @@ namespace UnityEngine.UI.Extensions
 
 
         //*** METHODS - PROTECTED ***//
-        virtual protected void Awake()
+        protected virtual void Awake()
         {
             TargetScrollRect = GetComponent<ScrollRect>();
             ScrollWindow = TargetScrollRect.GetComponent<RectTransform>();
         }
 
-        virtual protected void Start()
+        protected virtual void Start()
         {
 
         }
 
-        virtual protected void Update()
+        protected virtual void Update()
         {
             UpdateReferences();
             CheckIfScrollingShouldBeLocked();
@@ -170,7 +170,7 @@ namespace UnityEngine.UI.Extensions
         private void UpdateVerticalScrollPosition(RectTransform selection)
         {
             // move the current scroll rect to correct position
-            float selectionPosition = -selection.anchoredPosition.y;
+            float selectionPosition = -selection.anchoredPosition.y - (selection.rect.height * (1 - selection.pivot.y));
 
             float elementHeight = selection.rect.height;
             float maskHeight = ScrollWindow.rect.height;
@@ -181,13 +181,13 @@ namespace UnityEngine.UI.Extensions
 
             // move the target scroll rect
             TargetScrollRect.verticalNormalizedPosition +=
-                (offlimitsValue / LayoutListGroup.rect.height) * Time.deltaTime * scrollSpeed;
+                (offlimitsValue / LayoutListGroup.rect.height) * Time.unscaledDeltaTime * scrollSpeed;
         }
 
         private void UpdateHorizontalScrollPosition(RectTransform selection)
         {
             // move the current scroll rect to correct position
-            float selectionPosition = selection.anchoredPosition.x;
+            float selectionPosition = -selection.anchoredPosition.x - (selection.rect.width * (1 - selection.pivot.x));
 
             float elementWidth = selection.rect.width;
             float maskWidth = ScrollWindow.rect.width;
@@ -198,14 +198,14 @@ namespace UnityEngine.UI.Extensions
 
             // move the target scroll rect
             TargetScrollRect.horizontalNormalizedPosition +=
-                (offlimitsValue / LayoutListGroup.rect.width) * Time.deltaTime * scrollSpeed;
+                (offlimitsValue / LayoutListGroup.rect.width) * Time.unscaledDeltaTime * scrollSpeed;
         }
 
         private float GetScrollOffset(float position, float listAnchorPosition, float targetLength, float maskLength)
         {
-            if (position < listAnchorPosition)
+            if (position < listAnchorPosition + (targetLength / 2))
             {
-                return listAnchorPosition - position;
+                return (listAnchorPosition + maskLength) - (position - targetLength);
             }
             else if (position + targetLength > listAnchorPosition + maskLength)
             {

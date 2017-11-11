@@ -8,11 +8,11 @@ namespace UnityEngine.UI.Extensions
     [AddComponentMenu("Layout/Extensions/NonDrawingGraphic")]
     public class NonDrawingGraphic : MaskableGraphic
     {
-        override public void SetMaterialDirty() { return; }
-        override public void SetVerticesDirty() { return; }
+        public override void SetMaterialDirty() { return; }
+        public override void SetVerticesDirty() { return; }
 
         /// Probably not necessary since the chain of calls `Rebuild()`->`UpdateGeometry()`->`DoMeshGeneration()`->`OnPopulateMesh()` won't happen; so here really just as a fail-safe.
-        override protected void OnPopulateMesh(VertexHelper vh)
+        protected override void OnPopulateMesh(VertexHelper vh)
         {
             vh.Clear();
             return;

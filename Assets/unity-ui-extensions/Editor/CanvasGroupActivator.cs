@@ -10,7 +10,7 @@ namespace UnityEngine.UI.Extensions
     public class CanvasGroupActivator : EditorWindow
     {
         [MenuItem("Window/UI/Extensions/Canvas Groups Activator")]
-        static public void InitWindow()
+        public static void InitWindow()
         {
             EditorWindow.GetWindow<CanvasGroupActivator>();
         }

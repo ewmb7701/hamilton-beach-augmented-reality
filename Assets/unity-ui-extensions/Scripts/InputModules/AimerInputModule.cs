@@ -21,11 +21,11 @@ namespace UnityEngine.EventSystems.Extensions
         /// The object under aimer. A static access field that lets you know what is under the aimer.
         /// This field can return null.
         /// </summary>
-        static public GameObject objectUnderAimer;
+        public static GameObject objectUnderAimer;
 
         protected AimerInputModule() { }
 
-        override public void ActivateModule()
+        public override void ActivateModule()
         {
             StandaloneInputModule StandAloneSystem = GetComponent<StandaloneInputModule>();
 
@@ -36,7 +36,7 @@ namespace UnityEngine.EventSystems.Extensions
             }
         }
 
-        override public void Process()
+        public override void Process()
         {
             bool pressed = Input.GetButtonDown(activateAxis);
             bool released = Input.GetButtonUp(activateAxis);
@@ -51,7 +51,7 @@ namespace UnityEngine.EventSystems.Extensions
                 RemovePointerData(pointer);
         }
 
-        virtual protected PointerEventData GetAimerPointerEventData()
+        protected virtual PointerEventData GetAimerPointerEventData()
         {
             PointerEventData pointerData;
 
@@ -154,7 +154,7 @@ namespace UnityEngine.EventSystems.Extensions
             }
         }
 
-        override public void DeactivateModule()
+        public override void DeactivateModule()
         {
             base.DeactivateModule();
             ClearSelection();
