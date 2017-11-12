@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Step xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <_Title>Plug Off</_Title>
-  <_Description>Anplug the appliance.</_Description>
+  <_Description>Unplug the appliance.</_Description>
   <_AnimationClipPtr>
     <_AssetInfo>
       <_GUID>7eaddf7d0ccba1345aeaaaca1cf0490f</_GUID>
