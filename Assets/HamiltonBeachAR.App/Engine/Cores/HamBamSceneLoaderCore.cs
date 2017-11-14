@@ -8,7 +8,7 @@ namespace RealitEX.HamiltonBeachAR.SceneManagement
     /// <summary>
     /// SceneLoader for HamBam;
     /// </summary>
-    public class HamBamSceneLoaderCore : Core<HamBamSceneLoaderCore>
+    public class HamBamSceneLoaderCore : CoreManager<HamBamSceneLoaderCore>
     {
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Methods, Public

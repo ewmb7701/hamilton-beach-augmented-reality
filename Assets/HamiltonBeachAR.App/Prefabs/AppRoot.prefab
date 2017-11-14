@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 114938769920309546}
   - component: {fileID: 114073511458031054}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestruction3
+  m_Name: DestroyOnLoadHaven3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 114465103911299336}
   - component: {fileID: 114273178004046354}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestructionCanvas(0)
+  m_Name: DestroyOnLoadHavenCanvas(0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4459579157580340}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestruction
+  m_Name: DestroyOnLoadHaven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -211,8 +211,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4075343399115206}
-  - component: {fileID: 114998993161196410}
-  - component: {fileID: 114482469151324666}
+  - component: {fileID: 114966873299424640}
   - component: {fileID: 114708228552306202}
   - component: {fileID: 114058702560725072}
   - component: {fileID: 114030688683196590}
@@ -307,7 +306,7 @@ GameObject:
   - component: {fileID: 114288598161858402}
   - component: {fileID: 114780938466319406}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestruction0
+  m_Name: DestroyOnLoadHaven0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -482,7 +481,7 @@ GameObject:
   - component: {fileID: 114807842604247404}
   - component: {fileID: 114419612395952884}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestruction4
+  m_Name: DestroyOnLoadHaven4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -554,7 +553,7 @@ GameObject:
   - component: {fileID: 114371740924892404}
   - component: {fileID: 114580836528153036}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestruction2
+  m_Name: DestroyOnLoadHaven2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,7 +588,7 @@ GameObject:
   - component: {fileID: 114122824878297210}
   - component: {fileID: 114091689459867896}
   m_Layer: 0
-  m_Name: SaveFromSceneLoadDestruction1
+  m_Name: DestroyOnLoadHaven1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -911,8 +910,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31588dfa6ff118e4f868925b7e409a85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _persistentCanvases: []
-  _saveFromSeneLoadDestructions:
+  _persistentCanvases:
+  - {fileID: 223092199494326622}
+  - {fileID: 223007506310952670}
+  _destroyOnLoadHavens:
   - {fileID: 224627055044859616}
   - {fileID: 224216687389267136}
   - {fileID: 224246516163351152}
@@ -1761,17 +1762,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 0
---- !u!114 &114482469151324666
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1226079466034820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68704fc9c3a8a154583d5cc6be9ab21a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114485080303083040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2185,7 +2175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43cdd4f8dfeccaa4690e714f3ab1d118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _saveFromSceneLoadDestruction: {fileID: 4459579157580340}
+  _dontDestroyOnLoadHaven: {fileID: 4459579157580340}
 --- !u!114 &114718860805966612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2590,7 +2580,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114998993161196410
+--- !u!114 &114966873299424640
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2598,7 +2588,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1226079466034820}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 353f71057d07ba94a8f42b8496ba8b4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 96d706252277c0c4b8d2acf78868029f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!222 &222018870071171978
