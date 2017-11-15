@@ -8,7 +8,7 @@ namespace RealitEX.HamiltonBeachAR.SceneManagement
     /// <summary>
     /// SceneLoader for HamBam;
     /// </summary>
-    public class HamBamSceneLoaderCore : CoreManager<HamBamSceneLoaderCore>
+    public class SceneLoader : CoreManager<SceneLoader>
     {
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Methods, Public
@@ -26,7 +26,7 @@ namespace RealitEX.HamiltonBeachAR.SceneManagement
             }
             else
             {
-                foreach (DynamicAssetsRoot dar in DARCore.I.Database)
+                foreach (DynamicAssetRoot dar in DynamicAssetRoots.I.Database)
                 {
                     global::UnityEngine.Debug.LogFormat("DAR in Database {0}", dar.ID);
                 }
@@ -39,7 +39,7 @@ namespace RealitEX.HamiltonBeachAR.SceneManagement
         /// </summary>
         public void LoadMainMenu()
         {
-            SceneCore.I.LoadSceneWhenValid(ScenePID.Menu_Main); // load the main menu
+            Scenes.I.LoadSceneWhenValid(ScenePID.Menu_Main); // load the main menu
         }
 
         //protected override void Update()

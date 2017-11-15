@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<PartsAsset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_Ptrs>
+    <PartPtr>
+      <_AssetInfo>
+        <_GUID>56c75fa9d6d3ed348b3ee7d51bd7b550</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/XmlAssets/Part/Disc.part.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssets.PartAsset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </PartPtr>
+    <PartPtr>
+      <_AssetInfo>
+        <_GUID>bd833c14d12f5444c9e9cc7239e63b14</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/XmlAssets/Part/Blade.part.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssets.PartAsset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </PartPtr>
+  </_Ptrs>
+</PartsAsset>
