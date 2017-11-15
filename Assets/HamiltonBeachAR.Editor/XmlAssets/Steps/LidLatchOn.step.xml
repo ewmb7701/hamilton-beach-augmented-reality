@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<StepAsset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_Title>Lid Latch On</_Title>
+  <_Description>Unit will not work unless latches on bowl are locked. Do not force latches to close</_Description>
+  <_AnimationClipPtr>
+    <_AssetInfo>
+      <_GUID>e3f083543fc16974b92a4cfbda441863</_GUID>
+      <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Animations/LidLatchOn.anim</_AssetDatabasePath>
+      <_TypeInfo>
+        <_AssemblyQualifiedName>UnityEngine.AnimationClip, UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+      </_TypeInfo>
+    </_AssetInfo>
+  </_AnimationClipPtr>
+  <_AnimationSpeed>1</_AnimationSpeed>
+  <_AnimationStartNormalized>0</_AnimationStartNormalized>
+</StepAsset>

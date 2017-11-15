@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<ScenarioDAR xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_XmlCache_Pointers>
+    <AssetPointer xsi:type="StepCollectionPtr">
+      <_AssetInfo>
+        <_GUID>b2b2497da06df664f8ac3008c973594c</_GUID>
+        <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/XmlAssets/StepCollections/HowToUseBlade.stepcollection.xml</_AssetDatabasePath>
+        <_TypeInfo>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssets.StepCollectionAsset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+        </_TypeInfo>
+      </_AssetInfo>
+    </AssetPointer>
+  </_XmlCache_Pointers>
+  <_Info>
+    <_Name>How To Use Blade</_Name>
+    <_Creator>AugmentEX</_Creator>
+  </_Info>
+</ScenarioDAR>

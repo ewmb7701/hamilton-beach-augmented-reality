@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<StepAsset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_Title>Disc Off (Slice)</_Title>
+  <_Description>Carefully remove disc from motor shaft.</_Description>
+  <_AnimationClipPtr>
+    <_AssetInfo>
+      <_GUID>a1a24788325840c47bafad9062fdc83d</_GUID>
+      <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Animations/DiscSliceOn.anim</_AssetDatabasePath>
+      <_TypeInfo>
+        <_AssemblyQualifiedName>UnityEngine.AnimationClip, UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+      </_TypeInfo>
+    </_AssetInfo>
+  </_AnimationClipPtr>
+  <_AnimationSpeed>-1</_AnimationSpeed>
+  <_AnimationStartNormalized>1</_AnimationStartNormalized>
+</StepAsset>

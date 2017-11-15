@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<StepAsset xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <_Title>Lid On</_Title>
+  <_Description>Place lid on bowl, making sure to align the pour spout on the lid with the pour spout on the bowl.</_Description>
+  <_AnimationClipPtr>
+    <_AssetInfo>
+      <_GUID>396cf52ab65e53240bb701ad92b069ff</_GUID>
+      <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/Assets/Animations/LidOn.anim</_AssetDatabasePath>
+      <_TypeInfo>
+        <_AssemblyQualifiedName>UnityEngine.AnimationClip, UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+      </_TypeInfo>
+    </_AssetInfo>
+  </_AnimationClipPtr>
+  <_AnimationSpeed>1</_AnimationSpeed>
+  <_AnimationStartNormalized>0</_AnimationStartNormalized>
+</StepAsset>

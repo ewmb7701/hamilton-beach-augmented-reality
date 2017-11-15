@@ -1,4 +1,4 @@
-﻿using SINeDUSTRIES.UnityEngine.DynamicAssetBundleFramework;
+﻿using SINeDUSTRIES.UnityEngine.DynamicAssetsFramework;
 using SINeDUSTRIES.UnityEngine.Managers;
 using SINeDUSTRIES.UnityEngine.SceneManagement;
 using SINeDUSTRIES.UnityEngine.SceneManagers;
@@ -17,20 +17,20 @@ namespace RealitEX.HamiltonBeachAR.SceneManagement
         /// <summary>
         /// Load the Scenario scene;
         /// </summary>
-        /// <param name="dabID">The DABID of the ScenarioDAB to load;</param>
+        /// <param name="dabID">The DARID of the ScenarioDAR to load;</param>
         public void LoadScenario(string dabID)
         {
-            if (ARScenarioSceneManager.TryLoadScenarioSceneWithScearioDABID(dabID))
+            if (ARScenarioSceneManager.TryLoadScenarioSceneWithScearioDARID(dabID))
             {
-                global::UnityEngine.Debug.LogFormat("Loaded Scenario with ScenarioDAB {0}", dabID);
+                global::UnityEngine.Debug.LogFormat("Loaded Scenario with ScenarioDAR {0}", dabID);
             }
             else
             {
-                foreach (DynamicAssetBundle dab in DABCore.I.Database)
+                foreach (DynamicAssetsRoot dar in DARCore.I.Database)
                 {
-                    global::UnityEngine.Debug.LogFormat("DAB in Database {0}", dab.DABID);
+                    global::UnityEngine.Debug.LogFormat("DAR in Database {0}", dar.ID);
                 }
-                throw new System.Exception("Could not load Scenario with ScenarioDAB" + dabID);
+                throw new System.Exception("Could not load Scenario with ScenarioDAR" + dabID);
             }
         }
 
