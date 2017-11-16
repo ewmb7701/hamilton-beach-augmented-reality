@@ -31,12 +31,12 @@ AnimationClip:
         tangentMode: 0
       - serializedVersion: 2
         time: 0.5
-        value: {x: 0, y: -7, z: 0}
+        value: {x: 0, y: -5, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
       - serializedVersion: 2
-        time: 1
+        time: 1.0166667
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -44,7 +44,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: FP9041_PRESS_KEY_2___/default
+    path: CONTROLPANEL
   m_ScaleCurves: []
   m_FloatCurves:
   - curve:
@@ -62,18 +62,12 @@ AnimationClip:
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
-      - serializedVersion: 2
-        time: 1
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
-    path: FP9041_PRESS_KEY_2___/default
-    classID: 23
+    attribute: m_IsActive
+    path: CONTROLPANEL
+    classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -84,17 +78,17 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 998604434
+      path: 2555688113
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 998604434
-      attribute: 3305885265
+      path: 2555688113
+      attribute: 2086281974
       script: {fileID: 0}
-      typeID: 23
+      typeID: 1
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []
@@ -103,7 +97,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: 1.0166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -134,18 +128,12 @@ AnimationClip:
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
-      - serializedVersion: 2
-        time: 1
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
-    path: FP9041_PRESS_KEY_2___/default
-    classID: 23
+    attribute: m_IsActive
+    path: CONTROLPANEL
+    classID: 1
     script: {fileID: 0}
   - curve:
       serializedVersion: 2
@@ -169,7 +157,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1
+        time: 1.0166667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -178,7 +166,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: FP9041_PRESS_KEY_2___/default
+    path: CONTROLPANEL
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -198,12 +186,12 @@ AnimationClip:
         tangentMode: 136
       - serializedVersion: 2
         time: 0.5
-        value: -7
+        value: -5
         inSlope: 0
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1
+        time: 1.0166667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -212,7 +200,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: FP9041_PRESS_KEY_2___/default
+    path: CONTROLPANEL
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -237,7 +225,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 1
+        time: 1.0166667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -246,7 +234,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: FP9041_PRESS_KEY_2___/default
+    path: CONTROLPANEL
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []

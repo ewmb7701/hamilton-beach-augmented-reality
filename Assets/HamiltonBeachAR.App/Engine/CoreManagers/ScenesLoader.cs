@@ -1,14 +1,14 @@
 ﻿using SINeDUSTRIES.UnityEngine.DynamicAssetsFramework;
-using SINeDUSTRIES.UnityEngine.Managers;
-using SINeDUSTRIES.UnityEngine.SceneManagement;
-using SINeDUSTRIES.UnityEngine.SceneManagers;
+using SINeDUSTRIES.UnityEngine.Scenes;
+
+using UnityEngine;
 
 namespace RealitEX.HamiltonBeachAR.SceneManagement
 {
     /// <summary>
     /// SceneLoader for HamBam;
     /// </summary>
-    public class SceneLoader : CoreManager<SceneLoader>
+    public class ScenesLoader : MonoBehaviour
     {
         /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // Methods, Public
@@ -20,13 +20,13 @@ namespace RealitEX.HamiltonBeachAR.SceneManagement
         /// <param name="dabID">The DARID of the ScenarioDAR to load;</param>
         public void LoadScenario(string dabID)
         {
-            if (ARScenarioSceneManager.TryLoadScenarioSceneWithScearioDARID(dabID))
+            if (ScenarioScene.TryLoadScenarioSceneWithScearioDARID(dabID))
             {
                 global::UnityEngine.Debug.LogFormat("Loaded Scenario with ScenarioDAR {0}", dabID);
             }
             else
             {
-                foreach (DynamicAssetRoot dar in DynamicAssetRoots.I.Database)
+                foreach (DynamicAssetRoot dar in DynamicAssetsManager.I.Database)
                 {
                     global::UnityEngine.Debug.LogFormat("DAR in Database {0}", dar.ID);
                 }
@@ -39,22 +39,15 @@ namespace RealitEX.HamiltonBeachAR.SceneManagement
         /// </summary>
         public void LoadMainMenu()
         {
-            Scenes.I.LoadSceneWhenValid(ScenePID.Menu_Main); // load the main menu
+            ScenesManager.I.LoadSceneWhenValid(ScenePID.Menu_Main); // load the main menu
         }
 
-        //protected override void Update()
-        //{
-        //    base.Update();
-
-        //    Debug.LogFormat("Paths ProductSetting Update; PersistentData path {0}", Application.persistentDataPath);
-        //}
-
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        // Core Handlers
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-        public override void HandlersRegister(object handler) { }
-
-        public override void HandlersUnregister(object handler) { }
+        /// <summary>
+        /// Load Parts scene;
+        /// </summary>
+        public void LoadParts()
+        {
+            ScenesManager.I.LoadSceneWhenValid(ScenePID.Parts); // load parts
+        }
     }
 }

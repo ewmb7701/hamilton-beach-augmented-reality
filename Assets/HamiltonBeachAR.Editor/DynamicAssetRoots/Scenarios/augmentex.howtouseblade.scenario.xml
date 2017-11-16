@@ -6,7 +6,7 @@
         <_GUID>b2b2497da06df664f8ac3008c973594c</_GUID>
         <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/XmlAssets/Steps/HowToUseBlade.steps.xml</_AssetDatabasePath>
         <_TypeInfo>
-          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssets.Steps, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssets.StepsAsset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
         </_TypeInfo>
       </_AssetInfo>
     </AssetPointer>

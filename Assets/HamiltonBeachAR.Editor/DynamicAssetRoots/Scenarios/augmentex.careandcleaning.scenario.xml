@@ -6,7 +6,7 @@
         <_GUID>fa25c2cbfe9d964488f9518edb67a02b</_GUID>
         <_AssetDatabasePath>Assets/HamiltonBeachAR.Editor/XmlAssets/Steps/CareAndCleaning.steps.xml</_AssetDatabasePath>
         <_TypeInfo>
-          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssets.Steps, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
+          <_AssemblyQualifiedName>SINeDUSTRIES.UnityEngine.DynamicAssets.StepsAsset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</_AssemblyQualifiedName>
         </_TypeInfo>
       </_AssetInfo>
     </AssetPointer>

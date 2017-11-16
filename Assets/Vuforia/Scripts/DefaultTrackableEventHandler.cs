@@ -38,8 +38,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour, ITrackableEventHandle
     #region PUBLIC_METHODS
 
     /// <summary>
-    ///     Implementation of the ITrackableEventHandler function called when the
-    ///     tracking state changes.
+    /// Implementation of the ITrackableEventHandler function called when the tracking state changes.
     /// </summary>
     public void OnTrackableStateChanged(
         TrackableBehaviour.Status previousStatus,

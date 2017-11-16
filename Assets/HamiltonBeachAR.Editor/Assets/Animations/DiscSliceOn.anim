@@ -38,7 +38,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: PIVOT_DISK
+    path: DISK
   m_ScaleCurves: []
   m_FloatCurves:
   - curve:
@@ -56,46 +56,12 @@ AnimationClip:
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
-      - serializedVersion: 2
-        time: 1.0166667
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
-    path: PIVOT_DISK/FP9023_BLADE_DISK___/default/default_MeshPart1
-    classID: 23
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.016666668
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 1.0166667
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: PIVOT_DISK/FP9023_BLADE_DISK___/default/default_MeshPart0
-    classID: 23
+    attribute: m_IsActive
+    path: DISK
+    classID: 1
     script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
@@ -106,24 +72,17 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1063016930
+      path: 987836598
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1663064658
-      attribute: 3305885265
+      path: 987836598
+      attribute: 2086281974
       script: {fileID: 0}
-      typeID: 23
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 338127556
-      attribute: 3305885265
-      script: {fileID: 0}
-      typeID: 23
+      typeID: 1
       customType: 0
       isPPtrCurve: 0
     pptrCurveMapping: []
@@ -161,7 +120,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: PIVOT_DISK
+    path: DISK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -189,7 +148,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: PIVOT_DISK
+    path: DISK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -205,7 +164,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: PIVOT_DISK
+    path: DISK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -223,46 +182,12 @@ AnimationClip:
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 103
-      - serializedVersion: 2
-        time: 1.0166667
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: m_Enabled
-    path: PIVOT_DISK/FP9023_BLADE_DISK___/default/default_MeshPart1
-    classID: 23
-    script: {fileID: 0}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 0
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.016666668
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 1.0166667
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    attribute: m_Enabled
-    path: PIVOT_DISK/FP9023_BLADE_DISK___/default/default_MeshPart0
-    classID: 23
+    attribute: m_IsActive
+    path: DISK
+    classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
